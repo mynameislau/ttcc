@@ -297,7 +297,7 @@
     # specify the maximum number of statements allowed per line
     #max-statements-per-line:
     # require a capital letter for constructors
-    new-cap: 2
+    new-cap: 0
     # disallow the omission of parentheses when invoking a constructor with no arguments
     new-parens: 2
     # require or disallow an empty newline after variable declarations

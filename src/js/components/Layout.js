@@ -1,5 +1,5 @@
 import React from 'react';
 
-module.exports = ({num}) => {
-  return <h1>Title{num}</h1>;
-};
+export default ({ num, click }) => <h1 onClick={click}>
+    Title yee {num}
+  </h1>;

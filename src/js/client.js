@@ -1,7 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route } from 'react-router';
+import { init } from './store';
+import NumUpdater from './components/NumUpdater';
 
-import Layout from './components/Layout';
-
-const app = window.document.getElementById('app');
-ReactDOM.render(<Layout num="3" />, app);
+init(() => {
+  ReactDOM.render(
+    <Router>
+      <Route path="/" component={NumUpdater} />
+    </Router>,
+  document.getElementById('app'));
+});
