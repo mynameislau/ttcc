@@ -81,7 +81,7 @@
     # require default case in switch statements
     default-case: 2
     # enforce consistent newlines before or after dots
-    dot-location: 2
+    dot-location: [2, property]
     # encourage use of dot notation whenever possible
     dot-notation: 2
     # require use of === and !==
@@ -287,7 +287,7 @@
     # specify the maximum depth that blocks can be nested
     #max-depth:
     # specify the maximum length of a line in your program
-    #max-len:
+    max-len: 0
     # specify the maximum depth callbacks can be nested
     #max-nested-callbacks:
     # specify the number of parameters that can be used in the function declaration
@@ -321,7 +321,7 @@
     # disallow multiple empty lines
     #no-multiple-empty-lines:
     # disallow negated conditions
-    no-negated-condition: 2
+    #no-negated-condition: 2
     # disallow nested ternary expressions
     #no-nested-ternary:
     # disallow the use of the Object constructor
