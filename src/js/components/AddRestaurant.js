@@ -3,8 +3,9 @@ import { store, ADD_RESTAURANT, ADD_USER_TO_RESTAURANT } from '../store';
 // import Button from './Button';
 // import $ from '../vendors/bliss';
 
-const check = function (event) {
+const check = (event) => {
   event.preventDefault();
+  console.log('checking');
   const nameInput = document.forms.addRestaurant.elements.name;
   const restaurantName = nameInput.value;
 
@@ -20,8 +21,10 @@ const check = function (event) {
 
   if (event.target.checkValidity()) {
     store.dispatch({ type: ADD_RESTAURANT, name: restaurantName });
+    console.log('name', restaurantName);
     store.dispatch({ type: ADD_USER_TO_RESTAURANT, name: restaurantName });
   }
+  console.log('end');
 };
 
 export default () =>

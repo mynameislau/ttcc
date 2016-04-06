@@ -4,7 +4,6 @@
     es6: true
     browser: false
   rules:
-
     # disallow or enforce trailing commas
     comma-dangle: [2, only-multiline]
     # disallow assignment in conditional expressions
