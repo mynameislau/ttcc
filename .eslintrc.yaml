@@ -381,3 +381,6 @@
 #spaced-comment:
     # require regex literals to be wrapped in parentheses
 #wrap-regex:
+
+
+    object-shorthand: 0

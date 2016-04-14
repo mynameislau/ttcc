@@ -1,17 +1,16 @@
 import React from 'react';
 import User from './User';
-import { REMOVE_USER_FROM_RESTAURANT, ADD_USER_TO_RESTAURANT, store } from '../store.js';
 
-const usersList = restaurant =>
-  restaurant.get('users')
-  .map(item =>
-    <li key={item}><User user={item} /></li>
-  );
-
-export default ({ restaurant }) =>
+export default ({ restaurant, add, remove, userList }) =>
   <div>
     <span>{restaurant.get('name')}</span>
-    <button onClick={() => store.dispatch({ type: ADD_USER_TO_RESTAURANT, name: restaurant.get('name') })}>Plus</button>
-    <button onClick={() => store.dispatch({ type: REMOVE_USER_FROM_RESTAURANT })}>Minus</button>
-    <ul>{usersList(restaurant)}</ul>
+    <button onClick={() => add(restaurant.get('name'))}>Plus</button>
+    <button onClick={() => remove(restaurant.get('name'))}>Minus</button>
+    <ul>
+      {restaurant.get('users').map(userID => {
+        const user = userList.get(userID);
+        return <li key={user.get('userID')}><User username={user.get('username')} /></li>;
+      }
+      )}
+  </ul>
   </div>;

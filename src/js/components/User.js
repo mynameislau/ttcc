@@ -1,3 +1,3 @@
 import React from 'react';
 
-export default ({ user }) => <div>{user}</div>;
+export default ({ username, userID }) => <div>{username} {userID}</div>;
