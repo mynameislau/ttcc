@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { ADD_RESTAURANT, ADD_USER_TO_RESTAURANT } from '../actions';
+import { addRestaurant, addUserToRestaurant } from '../actions';
 import { restaurantExists } from '../helpers';
 // import Button from './Button';
 // import $ from '../vendors/bliss';
@@ -28,8 +28,8 @@ const mapDispatchToProps = dispatch => ({
     }
 
     if (event.target.checkValidity()) {
-      dispatch({ type: ADD_RESTAURANT, name: restaurantName });
-      dispatch({ type: ADD_USER_TO_RESTAURANT, name: restaurantName });
+      dispatch(addRestaurant(restaurantName));
+      dispatch(addUserToRestaurant(restaurantName));
     }
   }
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { SET_USERNAME } from '../actions';
+import { setUsername } from '../actions';
 import { userExists } from '../helpers';
 
 const mapStateToProps = state => ({
@@ -25,7 +25,7 @@ const mapDispatchToProps = dispatch => ({
     }
 
     if (event.target.checkValidity()) {
-      dispatch({ type: SET_USERNAME, username: username });
+      dispatch(setUsername(username));
     }
   }
 });

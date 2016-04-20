@@ -5,7 +5,7 @@ import Restaurant from '../components/Restaurant';
 import User from '../components/User';
 import NameForm from '../containers/NameForm';
 import { getMainUsername } from '../helpers';
-import { ADD_USER_TO_RESTAURANT, REMOVE_USER_FROM_RESTAURANT } from '../actions';
+import { addUserToRestaurant, removeUserFromRestaurant } from '../actions';
 
 const mapStateToProps = state => ({
   mainUsername: getMainUsername(state.main),
@@ -14,8 +14,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  add: (name) => dispatch({ type: ADD_USER_TO_RESTAURANT, name: name }),
-  remove: (name) => dispatch({ type: REMOVE_USER_FROM_RESTAURANT, name: name })
+  add: (name) => dispatch(addUserToRestaurant(name)),
+  remove: (name) => dispatch(removeUserFromRestaurant(name))
 });
 
 const component = ({ mainUsername, restaurantList, userList, add, remove }) =>

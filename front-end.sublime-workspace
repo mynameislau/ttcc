@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"remot",
+				"remoteMiddleware"
+			],
+			[
+				"es",
+				"babel-preset-es2015-node"
+			],
+			[
+				"bab",
+				"babel-preset-es2015-node"
+			],
+			[
 				"rest",
 				"restaurantName"
 			],
@@ -502,83 +514,16 @@
 			[
 				"max",
 				"max-element-inner-width"
-			],
-			[
-				"ma",
-				"max-element-inner-width"
-			],
-			[
-				"max-",
-				"max-width"
-			],
-			[
-				"hea",
-				"headerHeight"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "src/js/client.js",
+			"file": "/C/scalamp/vhosts/vacbleu-webDrupal/sites/all/themes/va_theme/config.rb",
 			"settings":
 			{
-				"buffer_size": 2486,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Package Control Messages\n========================\n\nSublimeLinter-contrib-eslint\n----------------------------\n\n  # SublimeLinter-eslint\n  \n  v1.10.0\n  \n  Return `--stdin-filename` to full path by default. It was made because ESLint >=2.0.0 does not work with current `.eslintignore` integration with plugin. See README for solutions to make `.eslintignore` work now.\n",
-			"settings":
-			{
-				"buffer_size": 366,
-				"line_ending": "Windows",
-				"name": "Package Control Messages",
-				"read_only": true,
-				"scratch": true
-			}
-		},
-		{
-			"file": "src/js/reducers/mainReducer.js",
-			"settings":
-			{
-				"buffer_size": 2424,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "import Server from 'socket.io';\n\nexport default function startServer() {\n  const io = new Server().attach(8090);\n  \n};\n",
-			"file": "server.js",
-			"file_size": 118,
-			"file_write_time": 131045102974515496,
-			"settings":
-			{
-				"buffer_size": 119,
-				"line_ending": "Windows",
-				"name": "import Server from 'socket.io';"
-			}
-		},
-		{
-			"file": "src/js/components/Restaurant.js",
-			"settings":
-			{
-				"buffer_size": 532,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/components/User.js",
-			"settings":
-			{
-				"buffer_size": 101,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/actions.js",
-			"settings":
-			{
-				"buffer_size": 272,
+				"buffer_size": 819,
 				"line_ending": "Windows"
 			}
 		},
@@ -586,41 +531,16 @@
 			"file": "src/js/routes/Home.js",
 			"settings":
 			{
-				"buffer_size": 1239,
+				"buffer_size": 1195,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/js/containers/AddRestaurant.js",
+			"file": "src/js/client.js",
 			"settings":
 			{
-				"buffer_size": 1334,
+				"buffer_size": 2909,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/containers/NameForm.js",
-			"settings":
-			{
-				"buffer_size": 1111,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": ".eslintrc.yaml",
-			"settings":
-			{
-				"buffer_size": 14382,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/helpers.js",
-			"settings":
-			{
-				"buffer_size": 504,
-				"line_ending": "Windows",
-				"name": "helpers.js"
 			}
 		}
 	],
@@ -722,24 +642,37 @@
 	],
 	"file_history":
 	[
+		"/C/www/ttcc/src/js/reducers/serverReducer.js",
+		"/C/www/ttcc/src/js/server.js",
+		"/C/www/ttcc/src/js/client.js",
+		"/C/www/ttcc/package.json",
+		"/C/www/ttcc/src/js/reducers/mainReducer.js",
+		"/C/www/ttcc/src/js/routes/Home.js",
+		"/C/www/ttcc/src/js/containers/NameForm.js",
+		"/C/www/ttcc/src/js/containers/AddRestaurant.js",
+		"/C/www/ttcc/src/js/actions.js",
+		"/C/www/ttcc/webpack.config.js",
+		"/C/www/ttcc/webpack.node.config.js",
+		"/C/www/ttcc/gulp-server.js",
+		"/C/www/ttcc/dev/server.js",
+		"/C/www/igesa/typo3conf/ext/theme_igesa_mobile/front-end/gulpfile.js",
+		"/C/www/igesa/fileadmin/templates/maquettes/homepage-redesign/package.json",
+		"/C/www/igesa/typo3conf/ext/theme_igesa_mobile/front-end/package.json",
+		"/C/www/ttcc/.eslintrc.yaml",
+		"/C/www/ttcc/src/js/components/Restaurant.js",
+		"/C/www/ttcc/src/js/components/User.js",
+		"/C/www/ttcc/src/js/helpers.js",
+		"/C/www/ttcc/server.js",
 		"/C/www/ttcc/src/js/reducers/main.js",
 		"/C/www/ttcc/src/js/container/AddRestaurant.js",
 		"/C/www/ttcc/src/js/container/NameForm.js",
 		"/C/www/ttcc/src/js/components/container/NameForm.js",
 		"/C/www/ttcc/src/js/components/container/AddRestaurant.js",
 		"/C/www/ttcc/src/js/components/NameForm.js",
-		"/C/www/ttcc/src/js/components/Restaurant.js",
 		"/C/www/ttcc/src/js/components/AddRestaurant.js",
-		"/C/www/ttcc/src/js/routes/Home.js",
 		"/C/www/ttcc/src/js/store.js",
-		"/C/www/ttcc/src/js/components/User.js",
-		"/C/www/ttcc/.eslintrc.yaml",
-		"/C/www/ttcc/src/js/actions.js",
 		"/C/www/ttcc/src/js/.eslintrc.yaml",
-		"/C/www/ttcc/package.json",
-		"/C/www/ttcc/webpack.config.js",
 		"/C/www/ttcc/src/index.html",
-		"/C/www/ttcc/src/js/client.js",
 		"/C/www/ttcc/src/js/components/Layout.js",
 		"/C/www/ttcc/src/js/components/NumUpdater.js",
 		"/C/php-5.3.23-apache-2.2.23/httpd/conf/httpd.conf",
@@ -836,20 +769,7 @@
 		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/img/inline-icons/newspaper.svg",
 		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/img/inline-icons/trash.svg",
 		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/img/inline-icons/balloon.svg",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/img/inline-icons/ultralight.svg",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/img/inline-icons/chevron-down.svg",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/img/inline-icons/chevron-up.svg",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/img/inline-icons/paperplane.svg",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/img/inline-icons/collision.svg",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/img/inline-icons/glider.svg",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/img/inline-icons/helicopter.svg",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/img/inline-icons/pen.svg",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/img/inline-icons/plane.svg",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/icon/grunt_svg/paperplane.svg",
-		"/C/scalamp/vhosts/cg13/typo3conf/ext/theme_egpV2/templates/html/index.html",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/modules/_download-btn.scss",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/modules/_news-block.scss",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/modules/_footer.scss"
+		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/img/inline-icons/ultralight.svg"
 	],
 	"find":
 	{
@@ -860,6 +780,9 @@
 		"height": 96.0,
 		"where_history":
 		[
+			"src/js",
+			"/src/js",
+			"src\\js",
 			"C:\\scalamp\\vhosts\\bea-web\\typo3conf\\ext\\bea_theme\\templates\\maquettes\\src\\",
 			"C:\\scalamp\\vhosts\\bea-web\\typo3conf\\ext\\bea_theme\\templates\\maquettes\\src\\scss",
 			"C:\\scalamp\\vhosts\\bea-web\\typo3conf\\ext\\bea_theme\\templates\\",
@@ -888,6 +811,15 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"type: ",
+			"name",
+			"actions",
+			"state.get('mainUserID')",
+			"= require",
+			"require",
+			"const",
+			"mainReducer",
+			"getMainUser",
 			"user",
 			"removeUserFromRestaurant",
 			"item",
@@ -1006,16 +938,7 @@
 			"        ",
 			"       ",
 			"      ",
-			"          ",
-			"         ",
-			"        ",
-			"       ",
-			"      ",
-			"     ",
-			"    ",
-			"   ",
-			"  ",
-			"image-height"
+			"          "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1068,227 +991,52 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/js/client.js",
+					"file": "/C/scalamp/vhosts/vacbleu-webDrupal/sites/all/themes/va_theme/config.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2486,
+						"buffer_size": 819,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1137,
-								1137
+								173,
+								173
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 366,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								366,
-								366
-							]
-						],
-						"settings":
-						{
-							"auto_indent": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_width": 2,
-							"word_wrap": true
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/js/reducers/mainReducer.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2424,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2424,
-								2424
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1404.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "server.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 119,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								115,
-								115
-							]
-						],
-						"settings":
-						{
-							"auto_name": "import Server from 'socket.io';",
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/js/components/Restaurant.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 532,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								189,
-								189
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/js/components/User.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 101,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								93,
-								93
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/js/actions.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 272,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								272,
-								272
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
+					"buffer": 1,
 					"file": "src/js/routes/Home.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1239,
+						"buffer_size": 1195,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								704,
-								704
+								493,
+								493
 							]
 						],
 						"settings":
@@ -1301,24 +1049,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "src/js/containers/AddRestaurant.js",
+					"buffer": 2,
+					"file": "src/js/client.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1334,
+						"buffer_size": 2909,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								764,
-								764
+								848,
+								848
 							]
 						],
 						"settings":
@@ -1328,99 +1076,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 234.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "src/js/containers/NameForm.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1111,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								696,
-								696
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": ".eslintrc.yaml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14382,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								14050,
-								13858
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/YAML/YAML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 9594.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "src/js/helpers.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 504,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								503,
-								503
-							]
-						],
-						"settings":
-						{
-							"auto_name": "helpers.js",
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1475,32 +1134,56 @@
 		"selected_items":
 		[
 			[
-				"user",
-				"src\\js\\components\\User.js"
+				"clie",
+				"src\\js\\client.js"
 			],
 			[
 				"home",
 				"src\\js\\routes\\Home.js"
 			],
 			[
-				"resta",
-				"src\\js\\components\\Restaurant.js"
-			],
-			[
-				"main",
-				"src\\js\\reducers\\main.js"
+				"p",
+				"package.json"
 			],
 			[
 				"actions",
 				"src\\js\\actions.js"
 			],
 			[
-				"eslint",
-				".eslintrc.yaml"
+				"main",
+				"src\\js\\reducers\\mainReducer.js"
 			],
 			[
-				"clie",
+				"clien",
 				"src\\js\\client.js"
+			],
+			[
+				"server",
+				"src\\js\\server.js"
+			],
+			[
+				"pac",
+				"package.json"
+			],
+			[
+				"webp",
+				"webpack.config.js"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"user",
+				"src\\js\\components\\User.js"
+			],
+			[
+				"resta",
+				"src\\js\\components\\Restaurant.js"
+			],
+			[
+				"eslint",
+				".eslintrc.yaml"
 			],
 			[
 				"add",
@@ -1961,30 +1644,6 @@
 			[
 				"filt",
 				"scss\\modules\\_filters.scss"
-			],
-			[
-				"notif",
-				"html\\content\\_pages\\notified-events.md"
-			],
-			[
-				"inv",
-				"scss\\modules\\_inv-infos-b.scss"
-			],
-			[
-				"infos-",
-				"scss\\modules\\_inv-infos-b.scss"
-			],
-			[
-				"jscs",
-				"js\\.jscsrc"
-			],
-			[
-				"stat",
-				"scss\\modules\\_state-block.scss"
-			],
-			[
-				"bre",
-				"scss\\modules\\_breadcrumbs.scss"
 			]
 		],
 		"width": 0.0

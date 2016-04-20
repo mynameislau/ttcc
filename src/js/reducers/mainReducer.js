@@ -68,13 +68,13 @@ export default (state = defaultState, action) => {
     return setUsername(state, state.get('mainUserID'), action.username);
 
   case ADD_RESTAURANT:
-    return addRestaurant(state, action.name);
+    return addRestaurant(state, action.restaurantName);
 
   case REMOVE_USER_FROM_RESTAURANT:
-    return removeUserFromRestaurant(state, action.name, state.get('mainUserID'));
+    return removeUserFromRestaurant(state, action.restaurantName, state.get('mainUserID'));
 
   case ADD_USER_TO_RESTAURANT:
-    return addUserToRestaurant(state, action.name, state.get('mainUserID'));
+    return addUserToRestaurant(state, action.restaurantName, state.get('mainUserID'));
 
   default:
     return state;
