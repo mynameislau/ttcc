@@ -7,7 +7,9 @@ import {
   ADD_RESTAURANT,
   ADD_USER_TO_RESTAURANT,
   CREATE_USER,
-  SET_USERNAME
+  SET_USERNAME,
+  SET_MAIN_USER,
+  UPDATE_SERVER_STATE
 } from '../actions';
 
 const defaultState = Immutable.Map({
@@ -38,18 +40,30 @@ const createUser = (state) => {
 };
 
 const setUsername = (state, userID, username) => {
-  console.log('ouiii', username);
-  return state.updateIn(['userList', userID, 'username'], () => username);
+  console.log('coté client', username, userID);
+  return state;
 };
 
-const addRestaurant = (state, restaurantName) => {
-  if (!state.get('restaurants').get(restaurantName)) {
-    const newRestaurant = Immutable.Map({ name: restaurantName, users: Immutable.List() });
-    const newRestaurants = Immutable.Map().set(restaurantName, newRestaurant);
-    const newState = state.mergeIn(['restaurants'], newRestaurants);
-    return newState;
-  }
+const addRestaurant = (state, restaurantName, creatorID) => {
+  console.log('add restaurant', restaurantName, creatorID);
+  // if (!state.get('restaurants').get(restaurantName)) {
+  //   const newRestaurant = Immutable.Map({ name: restaurantName, users: Immutable.List() });
+  //   const newRestaurants = Immutable.Map().set(restaurantName, newRestaurant);
+  //   const newState = state.mergeIn(['restaurants'], newRestaurants);
+  //   return newState;
+  // }
   return state;
+};
+
+const setMainUser = (state, user) => {
+  console.log('setting user id', user.userID);
+  return state.set('mainUserID', user.userID);
+};
+
+
+const updateServerState = (state, serverState) => {
+  return state.set('userList', Immutable.fromJS(serverState.userList))
+  .set('restaurants', Immutable.fromJS(serverState.restaurants));
 };
 
 const addUserToRestaurant = (state, restaurantName, userID) => {
@@ -65,16 +79,22 @@ export default (state = defaultState, action) => {
     return createUser(state);
 
   case SET_USERNAME:
-    return setUsername(state, state.get('mainUserID'), action.username);
+    return setUsername(state, action.userID, action.username);
 
   case ADD_RESTAURANT:
-    return addRestaurant(state, action.restaurantName);
+    return addRestaurant(state, action.restaurantName, action.creatorID);
 
   case REMOVE_USER_FROM_RESTAURANT:
     return removeUserFromRestaurant(state, action.restaurantName, state.get('mainUserID'));
 
   case ADD_USER_TO_RESTAURANT:
     return addUserToRestaurant(state, action.restaurantName, state.get('mainUserID'));
+
+  case SET_MAIN_USER:
+    return setMainUser(state, action.user);
+
+  case UPDATE_SERVER_STATE:
+    return updateServerState(state, action.serverState);
 
   default:
     return state;

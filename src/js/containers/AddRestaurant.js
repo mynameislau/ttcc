@@ -7,11 +7,12 @@ import { restaurantExists } from '../helpers';
 
 
 const mapStateToProps = state => ({
-  restaurants: state.main.get('restaurants')
+  restaurants: state.main.get('restaurants'),
+  mainUserID: state.main.get('mainUserID')
 });
 
 const mapDispatchToProps = dispatch => ({
-  check: (event, restaurants) => {
+  check: (event, restaurants, mainUserID) => {
     event.preventDefault();
 
     const nameInput = document.forms.addRestaurant.elements.name;
@@ -28,15 +29,15 @@ const mapDispatchToProps = dispatch => ({
     }
 
     if (event.target.checkValidity()) {
-      dispatch(addRestaurant(restaurantName));
-      dispatch(addUserToRestaurant(restaurantName));
+      dispatch(addRestaurant(restaurantName, mainUserID));
     }
   }
 });
 
-const component = ({ restaurants, check }) =>
-  <form name="addRestaurant" noValidate onSubmit={ (event) => check(event, restaurants) }>
-    <input name="name" type="text" required />
+const component = ({ restaurants, check, mainUserID }) =>
+  <form name="addRestaurant" noValidate onSubmit={ (event) => check(event, restaurants, mainUserID) }>
+    <label for="add-restaurant">Ajouter un restaurant</label>
+    <input id="add-restaurant" name="name" type="text" required />
     <input type="submit" value="Ajout" />
   </form>;
 

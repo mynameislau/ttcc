@@ -9,24 +9,32 @@ import { addUserToRestaurant, removeUserFromRestaurant } from '../actions';
 
 const mapStateToProps = state => ({
   mainUsername: getMainUsername(state.main),
+  mainUserID: state.main.get('mainUserID'),
   restaurantList: state.main.get('restaurants').valueSeq(),
   userList: state.main.get('userList')
 });
 
 const mapDispatchToProps = dispatch => ({
-  add: (name) => dispatch(addUserToRestaurant(name)),
-  remove: (name) => dispatch(removeUserFromRestaurant(name))
+  add: (name, userID) => dispatch(addUserToRestaurant(name, userID)),
+  remove: (name, userID) => dispatch(removeUserFromRestaurant(name, userID))
 });
 
-const component = ({ mainUsername, restaurantList, userList, add, remove }) =>
+const component = ({ mainUsername, restaurantList, userList, add, remove, mainUserID }) =>
   <div>
     <User username={mainUsername} />
     <NameForm />
     <AddRestaurant />
     <ul>
+    {userList.filter(user => user.get('registered') === true).map(user =>
+      <li key={user.get('userID')}>
+        <User username={user.get('username')} />
+      </li>
+    )}
+    </ul>
+    <ul>
       {restaurantList.map(restaurant =>
         <li key={restaurant.get('name')}>
-          <Restaurant restaurant={restaurant} userList={userList} add={add} remove={remove} />
+          <Restaurant restaurant={restaurant} userID={mainUserID} userList={userList} add={add} remove={remove} />
         </li>
       )}
     </ul>

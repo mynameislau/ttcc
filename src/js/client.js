@@ -1,7 +1,7 @@
 import React from 'react';
 // import thunk from 'redux-thunk';
 import ReactDOM from 'react-dom';
-import { CREATE_USER } from './actions';
+import { updateServerState, setMainUser } from './actions';
 import Home from './routes/Home';
 import About from './components/About';
 import NoMatch from './components/NoMatch';
@@ -38,9 +38,14 @@ const store = createStore(
   )
 );
 
-socket.on('state', state =>
-  store.dispatch({ type: 'server', serverState: state })
+socket.on('stateChanged', state =>
+  store.dispatch(updateServerState(state))
 );
+
+socket.on('connected', user => {
+  console.log('user is', user);
+  store.dispatch(setMainUser(user));
+});
 
 const history = syncHistoryWithStore(browserHistory, store);
 
@@ -54,8 +59,6 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('app')
 );
-
-store.dispatch({ type: CREATE_USER });
 
 // import { createStore, applyMiddleware, compose } from 'redux';
 // import thunk from 'redux-thunk';

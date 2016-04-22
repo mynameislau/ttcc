@@ -1,18 +1,28 @@
 import Server from 'socket.io';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import serverReducer from './reducers/serverReducer';
+import { createUser } from './serverActions';
 
 const io = new Server().attach(8090);
 
-const users = [];
+const emitMiddleware = store => next => action => {
+  if (action.emit)
+  {
+    //io.emit('stateChanged', store.getSt);
+  }
+  return next(action);
+};
 
-// Add the reducer to your store on the `routing` key
-const store = createStore(serverReducer);
+
+const store = createStore(serverReducer, undefined, applyMiddleware(emitMiddleware));
 
 io.on('connection', socket => {
   console.log('connection');
-  users.push(users.length);
-  io.emit('state', store.getState());
+  // io.emit('state', store.getState());
+  store.dispatch(createUser());
+  const userList = store.getState().get('userList');
+  socket.emit('connected', userList.get(userList.size - 1));
+  io.emit('stateChanged', store.getState());
 
   socket.on('action', action => {
     console.log('action', action);
@@ -21,6 +31,7 @@ io.on('connection', socket => {
 });
 
 store.subscribe(() => {
-  io.emit('state', store.getState());
+  console.log('state changed !!!!');
+  io.emit('stateChanged', store.getState());
 });
 

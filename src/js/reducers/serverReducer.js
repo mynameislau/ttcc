@@ -29,6 +29,7 @@ const removeUserFromRestaurant = (state, restaurantName, userID) =>
 const createUser = (state) => {
   const newUser = Immutable.Map({
     username: 'anonymous',
+    registered: false,
     userID: state.get('userList').size
   });
   const newState = state.update('userList', userList => userList.push(newUser));
@@ -36,18 +37,11 @@ const createUser = (state) => {
 };
 
 const setUsername = (state, userID, username) => {
-  console.log('ouiii', username);
-  return state.updateIn(['userList', userID, 'username'], () => username);
-};
-
-const addRestaurant = (state, restaurantName) => {
-  if (!state.get('restaurants').get(restaurantName)) {
-    const newRestaurant = Immutable.Map({ name: restaurantName, users: Immutable.List() });
-    const newRestaurants = Immutable.Map().set(restaurantName, newRestaurant);
-    const newState = state.mergeIn(['restaurants'], newRestaurants);
-    return newState;
-  }
-  return state;
+  console.log('ouiii', username, userID);
+  const newState = state
+  .updateIn(['userList', userID, 'username'], () => username)
+  .updateIn(['userList', userID, 'registered'], () => true);
+  return newState;
 };
 
 const addUserToRestaurant = (state, restaurantName, userID) => {
@@ -55,6 +49,17 @@ const addUserToRestaurant = (state, restaurantName, userID) => {
   console.log(restaurantName, userID);
   return newState.updateIn(['restaurants', restaurantName, 'users'], users => users.push(userID));
 };
+
+const addRestaurant = (state, restaurantName, creatorID) => {
+  if (!state.get('restaurants').get(restaurantName)) {
+    const newRestaurant = Immutable.Map({ name: restaurantName, users: Immutable.List() });
+    const newRestaurants = Immutable.Map().set(restaurantName, newRestaurant);
+    const newState = state.mergeIn(['restaurants'], newRestaurants);
+    return addUserToRestaurant(newState, restaurantName, creatorID);
+  }
+  return state;
+};
+
 
 export default (state = defaultState, action) => {
   switch (action.type) {
@@ -66,13 +71,13 @@ export default (state = defaultState, action) => {
     return setUsername(state, action.userID, action.username);
 
   case ADD_RESTAURANT:
-    return addRestaurant(state, action.name);
+    return addRestaurant(state, action.restaurantName, action.creatorID);
 
   case REMOVE_USER_FROM_RESTAURANT:
-    return removeUserFromRestaurant(state, action.name, action.userID);
+    return removeUserFromRestaurant(state, action.restaurantName, action.userID);
 
   case ADD_USER_TO_RESTAURANT:
-    return addUserToRestaurant(state, action.name, action.userID);
+    return addUserToRestaurant(state, action.restaurantName, action.userID);
 
   default:
     return state;
