@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import AddRestaurant from '../containers/AddRestaurant';
 import Restaurant from '../components/Restaurant';
+import UserList from '../components/UserList';
 import User from '../components/User';
 import NameForm from '../containers/NameForm';
 import { getMainUsername } from '../helpers';
@@ -21,23 +22,25 @@ const mapDispatchToProps = dispatch => ({
 
 const component = ({ mainUsername, restaurantList, userList, add, remove, mainUserID }) =>
   <div>
-    <User username={mainUsername} />
-    <NameForm />
+    <div className="header">
+      <User username={mainUsername} />
+      <NameForm />
+    </div>
     <AddRestaurant />
-    <ul>
-    {userList.filter(user => user.get('registered') === true).map(user =>
-      <li key={user.get('userID')}>
-        <User username={user.get('username')} />
-      </li>
-    )}
-    </ul>
-    <ul>
-      {restaurantList.map(restaurant =>
-        <li key={restaurant.get('name')}>
-          <Restaurant restaurant={restaurant} userID={mainUserID} userList={userList} add={add} remove={remove} />
-        </li>
-      )}
-    </ul>
+    <section>
+      <h1>Restaurants</h1>
+      <ul className="restaurant-list">
+        {restaurantList.map(restaurant =>
+          <li key={restaurant.get('name')}>
+            <Restaurant restaurant={restaurant} userID={mainUserID} userList={userList} add={add} remove={remove} />
+          </li>
+        )}
+      </ul>
+    </section>
+    <section>
+      <h1>Utilisateurs</h1>
+      <UserList userList={userList} />
+    </section>
   </div>;
 
 export default connect(mapStateToProps, mapDispatchToProps)(component);

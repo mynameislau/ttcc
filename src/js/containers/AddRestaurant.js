@@ -34,11 +34,12 @@ const mapDispatchToProps = dispatch => ({
   }
 });
 
-const component = ({ restaurants, check, mainUserID }) =>
-  <form name="addRestaurant" noValidate onSubmit={ (event) => check(event, restaurants, mainUserID) }>
+const component = ({ restaurants, check, mainUserID }) => {
+  return <form class="add-restaurant" name="addRestaurant" noValidate onSubmit={ (event) => check(event, restaurants, mainUserID) }>
     <label for="add-restaurant">Ajouter un restaurant</label>
     <input id="add-restaurant" name="name" type="text" required />
     <input type="submit" value="Ajout" />
-  </form>;
+  </form>
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(component);

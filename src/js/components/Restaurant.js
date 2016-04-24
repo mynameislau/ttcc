@@ -2,7 +2,7 @@ import React from 'react';
 import User from './User';
 
 export default ({ restaurant, add, remove, userList, userID }) =>
-  <div>
+  <div class="restaurant">
     <span>{restaurant.get('name')}</span>
     <button onClick={() => add(restaurant.get('name'), userID)}>Plus</button>
     <button onClick={() => remove(restaurant.get('name'), userID)}>Minus</button>

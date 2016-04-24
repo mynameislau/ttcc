@@ -31,12 +31,7 @@ const removeUserFromRestaurant = (state, restaurantName, userID) =>
   state.updateIn(['restaurants', restaurantName, 'users'], users => users.filter(user => user !== userID));
 
 const createUser = (state) => {
-  const newUser = Immutable.Map({
-    username: 'anonymous',
-    userID: state.get('userList').size
-  });
-  const newState = state.update('userList', userList => userList.push(newUser));
-  return newState.set('mainUserID', newUser.get('userID'));
+  return state;
 };
 
 const setUsername = (state, userID, username) => {
