@@ -4,7 +4,8 @@
   "description": "ttcc",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --content-base src --inline --hot",
+    "dev": "webpack-dev-server --content-base dev --inline --hot",
+    "gulp": "gulp",
     "server": "babel-watch --presets es2015 src/js/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,8 +22,14 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
     "babel-watch": "^2.0.2",
+    "beepbeep": "^1.2.0",
+    "browser-sync": "^2.12.4",
+    "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^2.0.6",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^1.6.0",
     "immutable": "^3.7.6",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
@@ -33,6 +40,8 @@
     "redux-thunk": "^2.0.1",
     "socket.io": "^1.4.5",
     "socket.io-client": "^1.4.5",
+    "stylelint": "^6.2.1",
+    "svg-symbols-map": "^1.0.0",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   }
