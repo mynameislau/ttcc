@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"webp",
+				"webpack-dev-server"
+			],
+			[
 				"upda",
 				"updateIn"
 			],
@@ -510,10 +514,6 @@
 			[
 				"news",
 				"newsLength"
-			],
-			[
-				"n",
-				"newsData"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "src/js/containers/AddRestaurant.js",
 			"settings":
 			{
-				"buffer_size": 1415,
+				"buffer_size": 1449,
 				"line_ending": "Windows"
 			}
 		},
@@ -547,7 +547,7 @@
 			"file": "src/js/reducers/mainReducer.js",
 			"settings":
 			{
-				"buffer_size": 3030,
+				"buffer_size": 2799,
 				"line_ending": "Windows"
 			}
 		},
@@ -563,7 +563,7 @@
 			"file": "src/js/routes/Home.js",
 			"settings":
 			{
-				"buffer_size": 1500,
+				"buffer_size": 1588,
 				"line_ending": "Windows"
 			}
 		},
@@ -571,7 +571,56 @@
 			"file": "src/js/components/User.js",
 			"settings":
 			{
-				"buffer_size": 127,
+				"buffer_size": 128,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "webpack.config.js",
+			"settings":
+			{
+				"buffer_size": 892,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/index.html",
+			"settings":
+			{
+				"buffer_size": 240,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "gulpfile.js",
+			"settings":
+			{
+				"buffer_size": 2315,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "tasks/assets.js",
+			"settings":
+			{
+				"buffer_size": 1143,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "tasks/html.js",
+			"settings":
+			{
+				"buffer_size": 923,
+				"line_ending": "Windows",
+				"name": "html.js"
+			}
+		},
+		{
+			"file": "tasks/css.js",
+			"settings":
+			{
+				"buffer_size": 1334,
 				"line_ending": "Windows"
 			}
 		},
@@ -599,10 +648,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 269.0,
-		"last_filter": "syntajs",
+		"height": 361.0,
+		"last_filter": "syntaco",
 		"selected_items":
 		[
+			[
+				"syntaco",
+				"Set Syntax: CoffeeScript"
+			],
 			[
 				"syntajs",
 				"Set Syntax: JavaScript"
@@ -690,6 +743,8 @@
 	],
 	"file_history":
 	[
+		"/C/www/ttcc/package.json",
+		"/C/www/ttcc/tasks/map-svg.js",
 		"/C/www/wiko-store/magento/app/etc/local.xml",
 		"/C/www/wiko-store/magento/skin/frontend/rwd/scala/js/app.js",
 		"/C/www/wiko-store/magento/skin/frontend/rwd/scala/scss/module/_product-list.scss",
@@ -713,7 +768,6 @@
 		"/C/www/wiko-store/magento/skin/frontend/rwd/scala/js/slideshow.js",
 		"/C/www/wiko-store/magento/skin/frontend/rwd/scala/js/msrp_rwd.js",
 		"/C/www/ttcc/src/js/containers/AddRestaurant.js",
-		"/C/www/ttcc/package.json",
 		"/C/www/ttcc/webpack.config.js",
 		"/C/www/ttcc/webpack.node.config.js",
 		"/C/www/ttcc/gulp-server.js",
@@ -816,8 +870,7 @@
 		"/C/scalamp/vhosts/jm/.htaccess",
 		"/C/scalamp/vhosts/jm/init.php",
 		"/C/scalamp/vhosts/jm/config/settings.inc.php",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/img/inline-icons/spritemap.svg",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/a21glossary_advanced_output/pi1/a21glossary_advanced_output.html"
+		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/img/inline-icons/spritemap.svg"
 	],
 	"find":
 	{
@@ -859,6 +912,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"copyAssets",
 			"skip-account-top",
 			".price",
 			"require",
@@ -985,8 +1039,7 @@
 			"inline_svg",
 			"svgstore",
 			"download-btn",
-			"download-btn-",
-			"toolbar__btn--download"
+			"download-btn-"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1039,7 +1092,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 9,
 			"sheets":
 			[
 				{
@@ -1048,15 +1101,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1415,
+						"buffer_size": 1449,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1122,
-								1122
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1065,11 +1118,11 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": -0.0,
-						"translation.y": 546.0,
+						"translation.x": 0.0,
+						"translation.y": 209.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -1099,7 +1152,7 @@
 						"translation.y": 468.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -1129,7 +1182,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -1138,15 +1191,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3030,
+						"buffer_size": 2799,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1678,
-								1678
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1155,11 +1208,11 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": -0.0,
+						"translation.x": 0.0,
 						"translation.y": 1092.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -1185,11 +1238,11 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": -0.0,
+						"translation.x": 0.0,
 						"translation.y": 546.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -1198,15 +1251,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1500,
+						"buffer_size": 1588,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								911,
-								911
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1219,7 +1272,7 @@
 						"translation.y": 312.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -1228,15 +1281,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 127,
+						"buffer_size": 128,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								89,
-								89
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1247,11 +1300,188 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 7,
+					"file": "webpack.config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 892,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								527,
+								527
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 240,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								122,
+								122
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "gulpfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2315,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								126,
+								126
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 156.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "tasks/assets.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1143,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								117,
+								117
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "tasks/html.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 923,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								360,
+								360
+							]
+						],
+						"settings":
+						{
+							"auto_name": "html.js",
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "tasks/css.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1334,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
 					"file": "src/js/server.js",
 					"semi_transient": false,
 					"settings":
@@ -1277,11 +1507,11 @@
 						"translation.y": 156.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 14,
 					"file": "src/js/reducers/serverReducer.js",
 					"semi_transient": false,
 					"settings":
@@ -1307,7 +1537,7 @@
 						"translation.y": 702.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 13,
 					"type": "text"
 				}
 			]
@@ -1361,6 +1591,30 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"inde",
+				"src\\index.html"
+			],
+			[
+				"pac",
+				"package.json"
+			],
+			[
+				"map",
+				"tasks\\map-svg.js"
+			],
+			[
+				"css",
+				"tasks\\css.js"
+			],
+			[
+				"packa",
+				"package.json"
+			],
+			[
+				"asset",
+				"tasks\\assets.js"
+			],
 			[
 				"user",
 				"src\\js\\components\\User.js"
@@ -1430,10 +1684,6 @@
 				"src\\js\\client.js"
 			],
 			[
-				"pac",
-				"package.json"
-			],
-			[
 				"webp",
 				"webpack.config.js"
 			],
@@ -1468,10 +1718,6 @@
 			[
 				"store",
 				"src\\js\\store.js"
-			],
-			[
-				"packa",
-				"package.json"
 			],
 			[
 				"est",
@@ -1532,10 +1778,6 @@
 			[
 				"sitehe",
 				"src\\html\\partials\\site-header.hbs"
-			],
-			[
-				"inde",
-				"src\\html\\content\\_pages\\index.md"
 			],
 			[
 				"script",
@@ -1860,18 +2102,6 @@
 			[
 				"sitha",
 				"html\\partials\\site-header.hbs"
-			],
-			[
-				"fot",
-				"html\\partials\\site-footer.hbs"
-			],
-			[
-				"foo",
-				"scss\\modules\\_footer.scss"
-			],
-			[
-				"varai",
-				"scss\\base\\_variables.scss"
 			]
 		],
 		"width": 0.0

@@ -3,6 +3,7 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const fs = require('fs');
+const WebpackDevServer = require('webpack-dev-server');
 
 let autoTasksNames;
 let distTasksNames;
@@ -21,6 +22,22 @@ taskFilenames.forEach(filePath => {
 
 // default task starts subtasks
 gulp.task('default', autoTasksNames, () => {
+
+
+  // config = _.extend {}, webpackConfig
+
+  // # Start a webpack-dev-server.
+  // devServer = new WebpackDevServer(webpack(config),
+  //   contentBase: './public/'
+  //   hot: true
+  //   watchDelay: 10
+  //   noInfo: true
+  //   stats: { colors: true }
+  // )
+  // devServer.listen 8081, "0.0.0.0", (err) ->
+  //   throw new gutil.PluginError("webpack-dev-server", err) if err
+  //   callback()
+
   browserSync.get('dev').init({
     server:
     {
@@ -39,3 +56,44 @@ gulp.task('dist', distTasksNames, () => {
     open: false
   });
 });
+
+
+
+// coffe webpack + gulp
+
+
+// gulp = require('gulp')
+// browserSync = require('browser-sync')
+
+// gulp.task 'browser-sync', ['webpack:dev-server'], ->
+//   browserSync(
+//     proxy: "localhost:8081"
+//     port: 8080
+//   )
+
+
+
+
+// gulp = require('gulp')
+// gutil = require('gulp-util')
+// WebpackDevServer = require("webpack-dev-server")
+// webpackConfig = require("../../../webpack.config.js")
+// _ = require('underscore')
+// webpack = require("webpack")
+
+// gulp.task "webpack:dev-server", ['css'], (callback) ->
+//   config = _.extend {}, webpackConfig
+
+//   # Start a webpack-dev-server.
+//   devServer = new WebpackDevServer(webpack(config),
+//     contentBase: './public/'
+//     hot: true
+//     watchDelay: 10
+//     noInfo: true
+//     stats: { colors: true }
+//   )
+//   devServer.listen 8081, "0.0.0.0", (err) ->
+//     throw new gutil.PluginError("webpack-dev-server", err) if err
+//     callback()
+
+//   return
