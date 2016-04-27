@@ -4,6 +4,8 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const fs = require('fs');
 const WebpackDevServer = require('webpack-dev-server');
+const webpack = require('webpack');
+const webpackConfig = require('./webpack.config.js');
 
 let autoTasksNames;
 let distTasksNames;
@@ -22,27 +24,25 @@ taskFilenames.forEach(filePath => {
 
 // default task starts subtasks
 gulp.task('default', autoTasksNames, () => {
-
-
   // config = _.extend {}, webpackConfig
 
   // # Start a webpack-dev-server.
-  // devServer = new WebpackDevServer(webpack(config),
-  //   contentBase: './public/'
-  //   hot: true
-  //   watchDelay: 10
-  //   noInfo: true
-  //   stats: { colors: true }
-  // )
-  // devServer.listen 8081, "0.0.0.0", (err) ->
-  //   throw new gutil.PluginError("webpack-dev-server", err) if err
-  //   callback()
+  const devServer = new WebpackDevServer(webpack(webpackConfig),
+    {
+      contentBase: './dev/',
+      hot: true,
+      watchDelay: 10,
+      noInfo: true,
+      stats: { colors: true }
+    }
+  );
+
+  devServer.listen(8081, '0.0.0.0', error => {
+    console.log('error', error);
+  });
 
   browserSync.get('dev').init({
-    server:
-    {
-      baseDir: './dev/'
-    },
+    proxy: 'localhost:8081',
     open: false
   });
 });

@@ -42,7 +42,7 @@
     "socket.io-client": "^1.4.5",
     "stylelint": "^6.2.1",
     "svg-symbols-map": "^1.0.0",
-    "webpack": "^1.12.14",
+    "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1"
   }
 }
