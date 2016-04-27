@@ -1,49 +1,5 @@
-html, body {
-  margin: 0;
-  border: 0;
-  padding: 0;
-}
+@import 'base/base';
 
-html {
-  background-color: #00BCD4;
-  color: white;
-  font-family: sans-serif;
-  font-weight: 200;
-}
-
-input:invalid {
-  outline: 1px solid red;
-}
-
-section {
-  padding: 1em;
-}
-
-.header {
-  text-align: right;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 0.5em;
-}
-
-.header > * {
-  display: inline-block;
-  margin-left: 1em;
-}
-
-.add-restaurant {
-  text-align: center;
-  padding: 1em;
-}
-
-.restaurant {
-  display: inline-block;
-  padding: 1em;
-}
-
-.restaurant-list {
-  display: block;
-}
-
-.restaurant-list > li {
-  display: inline-block;
-}
+@import 'modules/txt-input';
+@import 'modules/add-restaurant';
+@import 'modules/submit-btn';

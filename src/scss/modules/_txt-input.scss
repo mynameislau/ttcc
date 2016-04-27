@@ -1,0 +1,12 @@
+.txt-input {
+  background-color: transparent;
+  border: 0;
+
+  &:invalid {
+    outline: 2px solid orange;
+  }
+}
+
+.txt-input__label {
+ margin-right: 1em;
+}

@@ -27,22 +27,26 @@ gulp.task('default', autoTasksNames, () => {
   // config = _.extend {}, webpackConfig
 
   // # Start a webpack-dev-server.
-  const devServer = new WebpackDevServer(webpack(webpackConfig),
-    {
-      contentBase: './dev/',
-      hot: true,
-      watchDelay: 10,
-      noInfo: true,
-      stats: { colors: true }
-    }
-  );
+  // webpackConfig.entry.app.unshift('webpack-dev-server/client?http://localhost:8082/');
+  // webpackConfig.output.publicPath = `js/`;
+  // const devServer = new WebpackDevServer(webpack(webpackConfig),
+  //   {
+  //     contentBase: 'dev/',
+  //     hot: true,
+  //     watchOptions: {
+  //       aggregateTimeout: 10
+  //     },
+  //     noInfo: false,
+  //     stats: { colors: true }
+  //   }
+  // );
 
-  devServer.listen(8081, '0.0.0.0', error => {
-    console.log('error', error);
-  });
+  // devServer.listen(8082, '0.0.0.0', error => {
+  //   if (error) { console.log('error webpack', error); }
+  // });
 
   browserSync.get('dev').init({
-    proxy: 'localhost:8081',
+    proxy: 'localhost:8080',
     open: false
   });
 });

@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --content-base dev --inline --hot",
     "gulp": "gulp",
+    "pack": "webpack --config webpack.config.js",
     "server": "babel-watch --presets es2015 src/js/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
