@@ -5,6 +5,13 @@ html, body {
 }
 
 html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
   background-color: #0ca5c7;
   color: white;
   font-family: 'Open Sans', sans-serif;
@@ -42,10 +49,5 @@ h1 {
 
 .add-restaurant {
   text-align: center;
-  padding: 1em;
-}
-
-.restaurant {
-  display: inline-block;
   padding: 1em;
 }

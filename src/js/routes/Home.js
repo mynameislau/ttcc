@@ -5,7 +5,7 @@ import Restaurant from '../components/Restaurant';
 import UserList from '../components/UserList';
 import User from '../components/User';
 import NameForm from '../containers/NameForm';
-import { getMainUsername } from '../helpers';
+import { getMainUsername, isInRestaurant, isLogged } from '../helpers';
 import { addUserToRestaurant, removeUserFromRestaurant } from '../actions';
 
 const mapStateToProps = state => ({
@@ -31,12 +31,18 @@ const component = ({ mainUsername, restaurantList, userList, add, remove, mainUs
       <ul className="restaurant-list card__list">
         {restaurantList.map(restaurant =>
           <li className="card" key={restaurant.get('name')}>
-            <Restaurant restaurant={restaurant} userID={mainUserID} userList={userList} add={add} remove={remove} />
+            <Restaurant
+              restaurant={restaurant}
+              userID={mainUserID}
+              userList={userList}
+              add={isLogged(mainUserID, userList) && !isInRestaurant(restaurant, mainUserID) ? add : null}
+              remove={ isInRestaurant(restaurant, mainUserID) ? remove : null }
+            />
           </li>
         )}
+        { isLogged(mainUserID, userList) ? <li className="card card--ghost" key="add-restaurant"><AddRestaurant /></li> : null }
       </ul>
     </section>
-    <AddRestaurant />
     <section>
       <h1>Utilisateurs</h1>
       <UserList userList={userList} />

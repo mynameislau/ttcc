@@ -1,12 +1,13 @@
-.txt-input {
+input.txt-input, .txt-input input {
   background-color: transparent;
   border: 0;
   //border-radius: $btnBorderRadius;
   border-bottom: 0.2em solid $xlight;
   padding: $btnPadding;
+  color: $xlight;
 
   &:invalid {
-    outline: 2px solid orange;
+    //outline: 2px solid orange;
   }
 }
 

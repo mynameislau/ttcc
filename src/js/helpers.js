@@ -10,8 +10,20 @@ export const getMainUsername = (state) => {
 };
 
 export const userExists = (username, userList) =>
-  (userList.filter(entry => entry.get('name') === username).size > 0);
+  (userList.filter(entry => entry.get('username') === username).size > 0);
 
 export const restaurantExists = (restaurantName, restaurants) =>
   restaurants.get(restaurantName);
 
+export const isInRestaurant = (restaurant, targetID) => {
+  return restaurant
+  .get('users')
+  .filter(userID => userID === targetID)
+  .size;
+};
+
+export const isLogged = (userID, userList) => {
+  return userList
+  .filter(user => user.get('userID') === userID && user.get('registered') === true)
+  .size;
+};

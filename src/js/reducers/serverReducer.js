@@ -47,7 +47,7 @@ const setUsername = (state, userID, username) => {
 const addUserToRestaurant = (state, restaurantName, userID) => {
   const newState = removeUserFromAllRestaurants(state, userID);
   console.log(restaurantName, userID);
-  return newState.updateIn(['restaurants', restaurantName, 'users'], users => users.push(userID));
+  return newState.updateIn(['restaurants', restaurantName, 'users'], users => users.push(parseInt(userID)));
 };
 
 const addRestaurant = (state, restaurantName, creatorID) => {

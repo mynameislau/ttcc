@@ -1,4 +1,6 @@
 .btn {
+  border: 0;
+
   background-color: #f5d823;
   color: #845d14;
   border: 0;
@@ -6,6 +8,9 @@
   border-top: 1px solid #f9e14a;
   border-left: 1px solid #e4c102;
   border-right: 1px solid #e4c102;
+  animation: fadeIn 0.5s;
+
+
   padding: $btnPadding;
   border-radius: $btnBorderRadius;
   cursor: pointer;
@@ -13,6 +18,15 @@
   font-family: $fontStackRounded;
   margin-left: 0.2em;
   margin-right: 0.2em;
+}
+
+.btn--cancel {
+  background-color: #ff9974;
+  color: #803434;
+  box-shadow: 0 4px #bf6f6c;
+  border-top: 1px solid #d8a38d;
+  border-left: 1px solid #bd8888;
+  border-right: 1px solid #c38989;
 }
 
 .btn + .btn {
