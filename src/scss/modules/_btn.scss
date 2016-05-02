@@ -1,0 +1,29 @@
+.btn {
+  background-color: #f5d823;
+  color: #845d14;
+  border: 0;
+  box-shadow: 0 4px #d6a859;
+  border-top: 1px solid #f9e14a;
+  border-left: 1px solid #e4c102;
+  border-right: 1px solid #e4c102;
+  padding: $btnPadding;
+  border-radius: $btnBorderRadius;
+  cursor: pointer;
+  font-weight: 800;
+  font-family: $fontStackRounded;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+}
+
+.btn + .btn {
+  margin-top: 0.5em;
+}
+
+.txt-input + .btn {
+  margin-left: 1em;
+}
+
+.btn--full {
+  display: block;
+  width: 100%;
+}

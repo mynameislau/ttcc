@@ -1,0 +1,26 @@
+.card {
+  background-color: $xlight;
+  color: $grey;
+
+  box-shadow: 0 0.2em 0.5em rgba(0,0,0, 0.2);
+  border-radius: 0.2em;
+  min-width: 15em;
+}
+
+.card__title {
+  display: block;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+.card__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.card__list > li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 1em;
+}

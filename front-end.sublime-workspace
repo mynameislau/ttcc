@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"font",
+				"font-weight"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"border",
+				"border-left"
+			],
+			[
+				"web",
+				"webpackConfig"
+			],
+			[
 				"bac",
 				"background-color"
 			],
@@ -180,10 +204,6 @@
 				"z-header"
 			],
 			[
-				"pad",
-				"padding-right"
-			],
-			[
 				"maw",
 				"max-width"
 			],
@@ -196,16 +216,8 @@
 				"background-image"
 			],
 			[
-				"font",
-				"font-size"
-			],
-			[
 				"co",
 				"console"
-			],
-			[
-				"margin",
-				"margin"
 			],
 			[
 				"tabl",
@@ -234,10 +246,6 @@
 			[
 				"paddi",
 				"padding-left"
-			],
-			[
-				"border",
-				"border-right"
 			],
 			[
 				"color",
@@ -506,86 +514,11 @@
 			[
 				"table-",
 				"table-cell"
-			],
-			[
-				"next",
-				"nextNews"
-			],
-			[
-				"news",
-				"newsLength"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "package.json",
-			"settings":
-			{
-				"buffer_size": 1434,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "gulpfile.js",
-			"settings":
-			{
-				"buffer_size": 2351,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/containers/AddRestaurant.js",
-			"settings":
-			{
-				"buffer_size": 1523,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/scss/modules/_txt-input.scss",
-			"settings":
-			{
-				"buffer_size": 154,
-				"line_ending": "Windows",
-				"name": "_txt-input.scss"
-			}
-		},
-		{
-			"file": "src/scss/modules/_submit-btn.scss",
-			"settings":
-			{
-				"buffer_size": 49,
-				"line_ending": "Windows",
-				"name": "_submit-btn.scss"
-			}
-		},
-		{
-			"file": "src/scss/main.scss",
-			"settings":
-			{
-				"buffer_size": 115,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/scss/base/_base.scss",
-			"settings":
-			{
-				"buffer_size": 623,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/scss/modules/_add-restaurant.scss",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows",
-				"name": "_add-restaurant.scss"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -689,23 +622,34 @@
 	],
 	"file_history":
 	[
-		"/C/www/ttcc/src/scss/_base.scss",
-		"/C/www/ttcc/src/js/containers/AddRestaurant.js",
+		"/C/www/ttcc/src/index.html",
 		"/C/www/ttcc/src/js/containers/NameForm.js",
+		"/C/www/ttcc/src/js/routes/Home.js",
+		"/C/www/ttcc/src/js/containers/AddRestaurant.js",
+		"/C/www/ttcc/src/js/components/Restaurant.js",
+		"/C/www/ttcc/src/scss/modules/_btn.scss",
+		"/C/www/ttcc/src/scss/utils/_variables.scss",
+		"/C/www/ttcc/src/scss/base/_base.scss",
+		"/C/www/ttcc/src/scss/modules/_card.scss",
+		"/C/www/ttcc/src/scss/main.scss",
+		"/C/www/ttcc/package.json",
+		"/C/www/ttcc/webpack.config.js",
+		"/C/www/ttcc/testNodeWebpack.js",
+		"/C/www/ttcc/dev/index.html",
+		"/C/www/ttcc/gulpfile.js",
+		"/C/www/ttcc/src/scss/modules/_txt-input.scss",
+		"/C/www/ttcc/src/scss/modules/_submit-btn.scss",
+		"/C/www/ttcc/src/scss/modules/_add-restaurant.scss",
+		"/C/www/ttcc/src/scss/_base.scss",
 		"/C/www/ttcc/src/js/reducers/mainReducer.js",
 		"/C/www/ttcc/src/js/client.js",
-		"/C/www/ttcc/src/js/routes/Home.js",
 		"/C/www/ttcc/src/js/components/User.js",
-		"/C/www/ttcc/webpack.config.js",
-		"/C/www/ttcc/src/index.html",
-		"/C/www/ttcc/gulpfile.js",
 		"/C/www/ttcc/tasks/assets.js",
 		"/C/www/ttcc/tasks/html.js",
 		"/C/www/ttcc/tasks/css.js",
 		"/C/www/ttcc/src/js/server.js",
 		"/C/www/ttcc/src/js/reducers/serverReducer.js",
 		"/C/www/ttcc/src/js/actions.js",
-		"/C/www/ttcc/package.json",
 		"/C/www/ttcc/tasks/map-svg.js",
 		"/C/www/wiko-store/magento/app/etc/local.xml",
 		"/C/www/wiko-store/magento/skin/frontend/rwd/scala/js/app.js",
@@ -716,7 +660,6 @@
 		"/C/www/wiko-store/magento/skin/frontend/rwd/scala/package.json",
 		"/C/www/wiko-store/magento/skin/frontend/rwd/scala/scss/mixin/_toggle-content.scss",
 		"/C/scalamp/vhosts/vacbleu-webDrupal/sites/all/themes/va_theme/config.rb",
-		"/C/www/ttcc/src/js/components/Restaurant.js",
 		"/C/www/wiko-store/magento/skin/frontend/rwd/scala/js/lib/selectivizr.js",
 		"/C/www/ttcc/src/js/serverActions.js",
 		"/C/www/ttcc/.eslintrc.yaml",
@@ -806,17 +749,7 @@
 		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/base/_normalize.scss",
 		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/modules/_form.scss",
 		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/pages/_contact.scss",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/pages/_home.scss",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/modules/_entries-b.scss",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/modules/_entries-block.scss",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/vendors/_justifygrid.scss",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/modules/_filters-b.scss",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/modules/_news-b.scss",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/pages/_account-management.scss",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/pages/_investigation-report.scss",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/layout/_default.scss",
-		"/C/Users/lfalda/AppData/Local/Temp/print.css-rev314.svn000.tmp.css",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/Ts/setup/menus.ts"
+		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/pages/_home.scss"
 	],
 	"find":
 	{
@@ -858,6 +791,13 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"150",
+			"submit-btn",
+			"8082",
+			"8080",
+			"\"",
+			"8081",
+			");\n",
 			"copyAssets",
 			"skip-account-top",
 			".price",
@@ -978,14 +918,7 @@
 			"use=\"",
 			"use",
 			"fill",
-			"strok",
-			"fill",
-			"style",
-			"style=\"",
-			"inline_svg",
-			"svgstore",
-			"download-btn",
-			"download-btn-"
+			"strok"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1038,246 +971,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1434,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								168,
-								168
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JSON (JavaScriptNext).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "gulpfile.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2351,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1036,
-								1021
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 312.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/js/containers/AddRestaurant.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1523,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1404,
-								1404
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 546.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/scss/modules/_txt-input.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 154,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								131,
-								131
-							]
-						],
-						"settings":
-						{
-							"auto_name": "_txt-input.scss",
-							"syntax": "Packages/SCSS/SCSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/scss/modules/_submit-btn.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 49,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								49,
-								49
-							]
-						],
-						"settings":
-						{
-							"auto_name": "_submit-btn.scss",
-							"syntax": "Packages/SCSS/SCSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/scss/main.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 115,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								112,
-								112
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SCSS/SCSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/scss/base/_base.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 623,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								183,
-								183
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SCSS/SCSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/scss/modules/_add-restaurant.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"auto_name": "_add-restaurant.scss",
-							"syntax": "Packages/SCSS/SCSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1330,24 +1025,64 @@
 		"selected_items":
 		[
 			[
-				"addre",
-				"src\\js\\containers\\AddRestaurant.js"
+				"hom",
+				"src\\js\\routes\\Home.js"
 			],
 			[
 				"bas",
 				"src\\scss\\base\\_base.scss"
 			],
 			[
+				"var",
+				"src\\scss\\utils\\_variables.scss"
+			],
+			[
+				"card",
+				"src\\scss\\modules\\_card.scss"
+			],
+			[
 				"main",
 				"src\\scss\\main.scss"
+			],
+			[
+				"resta",
+				"src\\js\\components\\Restaurant.js"
+			],
+			[
+				"home",
+				"src\\js\\routes\\Home.js"
+			],
+			[
+				"btn",
+				"src\\scss\\modules\\_btn.scss"
+			],
+			[
+				"inde",
+				"src\\index.html"
+			],
+			[
+				"name",
+				"src\\js\\containers\\NameForm.js"
+			],
+			[
+				"add",
+				"src\\js\\containers\\AddRestaurant.js"
+			],
+			[
+				"addre",
+				"src\\scss\\modules\\_add-restaurant.scss"
 			],
 			[
 				"gul",
 				"gulpfile.js"
 			],
 			[
-				"inde",
-				"src\\index.html"
+				"web",
+				"webpack.config.js"
+			],
+			[
+				"pack",
+				"package.json"
 			],
 			[
 				"pac",
@@ -1374,14 +1109,6 @@
 				"src\\js\\components\\User.js"
 			],
 			[
-				"name",
-				"src\\js\\containers\\NameForm.js"
-			],
-			[
-				"home",
-				"src\\js\\routes\\Home.js"
-			],
-			[
 				"serverre",
 				"src\\js\\reducers\\serverReducer.js"
 			],
@@ -1396,10 +1123,6 @@
 			[
 				"actions",
 				"src\\js\\actions.js"
-			],
-			[
-				"add",
-				"src\\js\\containers\\AddRestaurant.js"
 			],
 			[
 				"ret",
@@ -1438,14 +1161,6 @@
 				"webpack.config.js"
 			],
 			[
-				"pack",
-				"package.json"
-			],
-			[
-				"resta",
-				"src\\js\\components\\Restaurant.js"
-			],
-			[
 				"st",
 				"src\\js\\store.js"
 			],
@@ -1472,10 +1187,6 @@
 			[
 				"est",
 				".eslintrc.yaml"
-			],
-			[
-				"web",
-				"webpack.config.js"
 			],
 			[
 				"utils.",
@@ -1536,10 +1247,6 @@
 			[
 				"uti",
 				"src\\scss\\tools\\_utilities.scss"
-			],
-			[
-				"var",
-				"src\\scss\\tools\\_variables.scss"
 			],
 			[
 				"tit",
@@ -1828,18 +1535,6 @@
 			[
 				"modu",
 				"scss\\base\\_modules-abstract.scss"
-			],
-			[
-				"ev",
-				"scss\\modules\\_events-block.scss"
-			],
-			[
-				"newblo",
-				"scss\\modules\\_news-block.scss"
-			],
-			[
-				"pub",
-				"html\\partials\\publi-block-article.hbs"
 			]
 		],
 		"width": 0.0

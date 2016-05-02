@@ -1,6 +1,9 @@
 .txt-input {
   background-color: transparent;
   border: 0;
+  //border-radius: $btnBorderRadius;
+  border-bottom: 0.2em solid $xlight;
+  padding: $btnPadding;
 
   &:invalid {
     outline: 2px solid orange;

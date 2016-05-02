@@ -38,7 +38,7 @@ const component = ({ restaurants, check, mainUserID }) => {
   return <form class="add-restaurant" name="addRestaurant" noValidate onSubmit={ (event) => check(event, restaurants, mainUserID) }>
     <label className="txt-input__label" for="add-restaurant">Ajouter un restaurant</label>
     <input className="txt-input" id="add-restaurant" name="name" type="text" required />
-    <input className="submit-btn" type="submit" value="Ajout" />
+    <input className="btn" type="submit" value="Ajout" />
   </form>
 };
 

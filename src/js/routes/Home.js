@@ -26,17 +26,17 @@ const component = ({ mainUsername, restaurantList, userList, add, remove, mainUs
       <User username={mainUsername} />
       <NameForm />
     </div>
-    <AddRestaurant />
     <section>
       <h1>Restaurants</h1>
-      <ul className="restaurant-list">
+      <ul className="restaurant-list card__list">
         {restaurantList.map(restaurant =>
-          <li key={restaurant.get('name')}>
+          <li className="card" key={restaurant.get('name')}>
             <Restaurant restaurant={restaurant} userID={mainUserID} userList={userList} add={add} remove={remove} />
           </li>
         )}
       </ul>
     </section>
+    <AddRestaurant />
     <section>
       <h1>Utilisateurs</h1>
       <UserList userList={userList} />

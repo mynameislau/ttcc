@@ -35,7 +35,7 @@ const component = ({check, userList, mainUserID}) =>
   <form name="setUsername" noValidate onSubmit={(event) => check(event, userList, mainUserID)}>
     <label for="change-name">Changer le nom</label>
     <input id="change-name" name="name" type="text" required />
-    <input type="submit" value="Ajout" />
+    <input className="btn" type="submit" value="OK" />
   </form>;
 
 export default connect(mapStateToProps, mapDispatchToProps)(component);
