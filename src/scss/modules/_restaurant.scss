@@ -10,8 +10,9 @@
 
 .restaurant__user-list {
   padding: 2em;
+  overflow: hidden;
 }
 
 .restaurant__user-list li {
-  animation: fadeIn 0.5s;
+  animation: slideIn 0.5s;
 }

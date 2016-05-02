@@ -4,7 +4,8 @@
 
   box-shadow: 0 0.2em 0.5em rgba(0,0,0, 0.2);
   border-radius: 0.2em;
-  min-width: 15em;
+  width: 15em;
+  animation: fadeIn 1s;
 }
 
 .card--ghost {
@@ -12,6 +13,7 @@
   border: 0.2em solid $xlight;
   border-style: dotted;
   border-radius: 1em;
+  box-shadow: none;
 }
 
 .card__title {
