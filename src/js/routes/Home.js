@@ -22,7 +22,13 @@ const mapDispatchToProps = dispatch => ({
 
 const component = ({ mainUsername, restaurantList, userList, add, remove, mainUserID }) =>
   <div>
+    <div className="global-layer">
+      <NameForm/>
+    </div>
     <div className="header">
+      <svg className="header__user-icon" role="presentation" title="" width="1.5em" height="1.5em">
+        <use xlinkHref="assets/map.svg#user" />
+      </svg>
       <User username={mainUsername} />
       <NameForm />
     </div>
