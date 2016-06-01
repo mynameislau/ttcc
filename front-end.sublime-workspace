@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"up",
+				"update"
+			],
+			[
+				"user",
+				"userID"
+			],
+			[
+				"ch",
+				"checkName"
+			],
+			[
+				"che",
+				"checkForm"
+			],
+			[
 				"ba",
 				"background"
 			],
@@ -110,10 +126,6 @@
 			[
 				"bab",
 				"babel-preset-es2015-node"
-			],
-			[
-				"user",
-				"userID"
 			],
 			[
 				"ret",
@@ -502,64 +514,11 @@
 			[
 				"bord",
 				"border-thin-light"
-			],
-			[
-				"margni",
-				"margin-bottom"
-			],
-			[
-				"curr",
-				"currentSubMenu"
-			],
-			[
-				"this",
-				"thisEntry"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "src/scss/modules/_global-layer.scss",
-			"settings":
-			{
-				"buffer_size": 304,
-				"line_ending": "Windows",
-				"name": "_global-layer.scss"
-			}
-		},
-		{
-			"file": "src/scss/modules/_name-form.scss",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/scss/base/_base.scss",
-			"settings":
-			{
-				"buffer_size": 637,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/scss/main.scss",
-			"settings":
-			{
-				"buffer_size": 333,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/containers/NameForm.js",
-			"settings":
-			{
-				"buffer_size": 1346,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -663,6 +622,28 @@
 	],
 	"file_history":
 	[
+		"/C/www/ttcc/src/js/serverActions.js",
+		"/C/www/ttcc/src/js/reducers/serverReducer.js",
+		"/C/www/ttcc/src/js/server.js",
+		"/C/www/mymarseille/_server/logs/error.log",
+		"/C/www/mymarseille/var/logs/dev/dev.log",
+		"/C/www/mymarseille/var/logs/dev/dev-error.log",
+		"/C/www/mymarseille/app/config/parameters.yml.dist",
+		"/C/www/mymarseille/app/config/parameters.yml",
+		"/C/scalamp/vhosts/cndp/.htaccess",
+		"/C/Users/lfalda/AppData/Local/Temp/.htaccess-rev195.svn000.tmp.htaccess",
+		"/C/scalamp/vhosts/cndp/sites/dev.garants/privates/.htaccess",
+		"/C/scalamp/vhosts/cndp/sites/dev.garants/settings.php",
+		"/C/scalamp/vhosts/cndp/sites/sites.php",
+		"/C/www/ttcc/src/js/form/form-validation.js",
+		"/C/www/ttcc/src/scss/modules/_global-layer.scss",
+		"/C/www/ttcc/src/scss/modules/_name-form.scss",
+		"/C/www/ttcc/src/scss/base/_base.scss",
+		"/C/www/ttcc/src/scss/main.scss",
+		"/C/www/ttcc/src/js/containers/NameForm.js",
+		"/C/scalamp/vhosts/met/sites/all/modules/me/me_profil_sante/me_profil_sante.module.mine",
+		"/C/scalamp/vhosts/met/sites/all/modules/me/me_profil_sante/me_profil_sante.module",
+		"/C/www/ttcc/src/js/form/formValidation.js",
 		"/C/www/ttcc/src/scss/modules/_restaurant.scss",
 		"/C/www/ttcc/src/scss/modules/_card.scss",
 		"/C/www/ttcc/src/scss/modules/_txt-input.scss",
@@ -671,18 +652,13 @@
 		"/C/www/ttcc/src/js/components/Restaurant.js",
 		"/C/www/ttcc/src/js/routes/Home.js",
 		"/C/www/ttcc/src/scss/modules/_header.scss",
-		"/C/www/ttcc/src/js/containers/NameForm.js",
-		"/C/www/ttcc/src/scss/modules/_name-form.scss",
 		"/C/www/ttcc/src/svg-map/pen.svg",
 		"/C/www/ttcc/src/svg-map/user.svg",
-		"/C/www/ttcc/src/scss/main.scss",
 		"/C/www/ttcc/dev/assets/map.svg",
 		"/C/www/ttcc/src/scss/modules/_btn.scss",
-		"/C/www/ttcc/src/scss/base/_base.scss",
 		"/C/www/ttcc/src/js/client.js",
 		"/C/www/ttcc/src/js/reducers/mainReducer.js",
 		"/C/www/ttcc/src/js/helpers.js",
-		"/C/www/ttcc/src/js/reducers/serverReducer.js",
 		"/C/www/ttcc/src/scss/base/_animations.scss",
 		"/C/www/ttcc/src/index.html",
 		"/C/www/ttcc/src/scss/utils/_variables.scss",
@@ -697,7 +673,6 @@
 		"/C/www/ttcc/tasks/assets.js",
 		"/C/www/ttcc/tasks/html.js",
 		"/C/www/ttcc/tasks/css.js",
-		"/C/www/ttcc/src/js/server.js",
 		"/C/www/ttcc/src/js/actions.js",
 		"/C/www/ttcc/tasks/map-svg.js",
 		"/C/www/wiko-store/magento/app/etc/local.xml",
@@ -710,7 +685,6 @@
 		"/C/www/wiko-store/magento/skin/frontend/rwd/scala/scss/mixin/_toggle-content.scss",
 		"/C/scalamp/vhosts/vacbleu-webDrupal/sites/all/themes/va_theme/config.rb",
 		"/C/www/wiko-store/magento/skin/frontend/rwd/scala/js/lib/selectivizr.js",
-		"/C/www/ttcc/src/js/serverActions.js",
 		"/C/www/ttcc/.eslintrc.yaml",
 		"/C/www/wiko-store/magento/skin/frontend/rwd/scala/js/slideshow.js",
 		"/C/www/wiko-store/magento/skin/frontend/rwd/scala/js/msrp_rwd.js",
@@ -775,22 +749,7 @@
 		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/html/content/_pages/informations.md",
 		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/html/content/_pages/account-management.md",
 		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/html/content/_pages/test-sticky.html",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/js/flow/script.js",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/config.rb",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/svgformat.hbs",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/html/content/_pages/materiaux.md",
-		"/C/scalamp/vhosts/met/sites/all/themes/me_theme/.integration/src/scss/base/_hide-drupal.scss",
-		"/C/scalamp/vhosts/met/sites/all/themes/me_theme/.integration/src/scss/tools/_utilities.scss",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/partials/footer.html",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/style.scss",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/modules/_footer-b.scss",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/modules/_toolbar.scss",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/modules/_search-entry.scss",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/async-main.scss",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/base/_print.scss",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/modules/_tabs.scss",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/dev/css/async-main.css",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/scss/base/_titillium.scss"
+		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/js/flow/script.js"
 	],
 	"find":
 	{
@@ -829,9 +788,12 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"garant",
+			";",
+			"reject",
 			"\"",
 			"6D6E71",
 			"{{icon}}",
@@ -956,10 +918,7 @@
 			"active",
 			"ac",
 			"footer-b__element--link-list",
-			"data-entry-link",
-			"opacity: 1",
-			"dist",
-			"fill"
+			"data-entry-link"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1006,160 +965,14 @@
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": true,
+		"whole_word": false,
 		"wrap": true
 	},
 	"groups":
 	[
 		{
-			"selected": 4,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "src/scss/modules/_global-layer.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 304,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								207,
-								207
-							]
-						],
-						"settings":
-						{
-							"auto_name": "_global-layer.scss",
-							"syntax": "Packages/SCSS/SCSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/scss/modules/_name-form.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SCSS/SCSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/scss/base/_base.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 637,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								253,
-								253
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SCSS/SCSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 78.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/scss/main.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 333,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								330,
-								330
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SCSS/SCSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/js/containers/NameForm.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1346,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								854,
-								854
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 156.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1211,6 +1024,18 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"server",
+				"src\\js\\reducers\\serverReducer.js"
+			],
+			[
+				"action",
+				"src\\js\\serverActions.js"
+			],
+			[
+				"form",
+				"src\\js\\form\\form-validation.js"
+			],
 			[
 				"nam",
 				"src\\js\\containers\\NameForm.js"
@@ -1348,10 +1173,6 @@
 				"src\\js\\reducers\\serverReducer.js"
 			],
 			[
-				"server",
-				"src\\js\\server.js"
-			],
-			[
 				"clie",
 				"src\\js\\client.js"
 			],
@@ -1382,10 +1203,6 @@
 			[
 				"sotre",
 				"src\\js\\store.js"
-			],
-			[
-				"action",
-				"src\\js\\actions.js"
 			],
 			[
 				"store",
@@ -1718,10 +1535,6 @@
 			[
 				"report",
 				"scss\\pages\\_investigation-report.scss"
-			],
-			[
-				"sprit",
-				"img\\inline-icons\\spritemap.svg"
 			]
 		],
 		"width": 0.0

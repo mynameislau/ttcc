@@ -4,9 +4,13 @@ import {
   REMOVE_USER_FROM_RESTAURANT,
   ADD_RESTAURANT,
   ADD_USER_TO_RESTAURANT,
-  CREATE_USER,
   SET_USERNAME
 } from '../actions';
+
+import {
+  CREATE_USER,
+  DELETE_USER
+} from '../serverActions';
 
 const defaultState = Immutable.Map({
   restaurants: Immutable.Map(),
@@ -34,6 +38,10 @@ const createUser = (state) => {
   });
   const newState = state.update('userList', userList => userList.push(newUser));
   return newState.set('mainUserID', newUser.get('userID'));
+};
+
+const deleteUser = (state, userID) => {
+ // state.update()
 };
 
 const setUsername = (state, userID, username) => {
@@ -66,6 +74,9 @@ export default (state = defaultState, action) => {
 
   case CREATE_USER:
     return createUser(state);
+
+  case DELETE_USER:
+    return deleteUser(state, action.userID);
 
   case SET_USERNAME:
     return setUsername(state, action.userID, action.username);

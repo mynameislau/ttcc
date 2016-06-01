@@ -1,7 +1,7 @@
 import Server from 'socket.io';
 import { createStore, applyMiddleware } from 'redux';
 import serverReducer from './reducers/serverReducer';
-import { createUser } from './serverActions';
+import { createUser, deleteUser } from './serverActions';
 
 const io = new Server().attach(8090);
 
@@ -21,12 +21,17 @@ io.on('connection', socket => {
   // io.emit('state', store.getState());
   store.dispatch(createUser());
   const userList = store.getState().get('userList');
-  socket.emit('connected', userList.get(userList.size - 1));
+  const newUser = userList.get(userList.size - 1);
+  socket.emit('connected', newUser);
   io.emit('stateChanged', store.getState());
 
   socket.on('action', action => {
     console.log('action', action);
     store.dispatch(action);
+  });
+
+  socket.on('disconnect', () => {
+    store.dispatch(deleteUser(newUser.get('userID')));
   });
 });
 
