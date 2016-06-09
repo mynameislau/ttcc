@@ -5,8 +5,8 @@ export default ({ restaurant, add, remove, userList, userID }) =>
   <div className="restaurant">
     <span className="card__title">{restaurant.get('name')}</span>
     <ul className="restaurant__user-list">
-      {restaurant.get('users').map(userID => {
-        const user = userList.get(userID);
+      {restaurant.get('users').map(currUserID => {
+        const user = userList.get(currUserID);
         return <li key={user.get('userID')}><User username={user.get('username')} /></li>;
       }
       )}

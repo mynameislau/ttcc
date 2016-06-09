@@ -186,7 +186,7 @@
     # disallow use of the with statement
     no-with: 2
     # require use of the second argument for parseInt()
-    #radix:
+    radix: 0
     # require declaration of all vars at the top of their containing scope
     vars-on-top: 2
     # require immediate function invocation to be wrapped in parentheses
