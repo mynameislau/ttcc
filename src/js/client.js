@@ -9,18 +9,19 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import { Router, Route, browserHistory } from 'react-router';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
+import { SOCKET_IO_PORT } from './config';
 import io from 'socket.io-client';
 
 import mainReducer from './reducers/mainReducer';
 
-const socket = io(`${location.protocol}//${location.hostname}:8090`);
+const socket = io(`${location.protocol}//${location.hostname}:${SOCKET_IO_PORT}`);
 
 const remoteMiddleware = store => next => action => {
   console.log('middle', action.type);
-  if (action.remote)
-  {
-    socket.emit('action', action);
+  if (action.remote) {
+    socket.emit('clientAction', action);
   }
+
   return next(action);
 };
 
@@ -37,13 +38,13 @@ const store = createStore(
   )
 );
 
-socket.on('stateChanged', state =>
+socket.on('serverStateChanged', state =>
   store.dispatch(updateServerState(state))
 );
 
-socket.on('connected', user => {
-  console.log('user is', user);
-  store.dispatch(setMainUser(user));
+socket.on('userSuccessfullyCreated', userID => {
+  console.log('user is', userID);
+  store.dispatch(setMainUser(userID));
 });
 
 const history = syncHistoryWithStore(browserHistory, store);
@@ -58,44 +59,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('app')
 );
-
-// import { createStore, applyMiddleware, compose } from 'redux';
-// import thunk from 'redux-thunk';
-// import invariant from 'redux-immutable-state-invariant';
-// import reducer from '../reducers';
-
-// export default function configureStore(initialState) {
-//   const store = createStore(reducer, initialState, compose(
-//     applyMiddleware(invariant(), thunk),
-//     window.devToolsExtension ? window.devToolsExtension() : f => f
-//   ));
-
-//   if (module.hot) {
-//     // Enable Webpack hot module replacement for reducers
-//     module.hot.accept('../reducers', () => {
-//       const nextReducer = require('../reducers');
-//       store.replaceReducer(nextReducer);
-//     });
-//   }
-
-//   return store;
-// }
-
-// import { createStore } from 'redux';
-// import rootReducer from '../reducers';
-
-// export default function configureStore(initialState) {
-//   const store = createStore(rootReducer, initialState,
-//     window.devToolsExtension ? window.devToolsExtension() : undefined
-//   );
-
-//   if (module.hot) {
-//     // Enable Webpack hot module replacement for reducers
-//     module.hot.accept('../reducers', () => {
-//       const nextReducer = require('../reducers');
-//       store.replaceReducer(nextReducer);
-//     });
-//   }
-
-//   return store;
-// }

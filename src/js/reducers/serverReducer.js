@@ -14,7 +14,6 @@ import {
 
 const defaultState = Immutable.Map({
   restaurants: Immutable.Map(),
-  mainUserID: null,
   userList: Immutable.List()
 });
 
@@ -28,7 +27,9 @@ const removeUserFromAllRestaurants = (state, userID) =>
   );
 
 const removeUserFromRestaurant = (state, restaurantName, userID) =>
-  state.updateIn(['restaurants', restaurantName, 'users'], users => users.filter(user => user !== userID));
+  state.updateIn(['restaurants', restaurantName, 'users'], users =>
+    users.filter(user => user !== userID)
+  );
 
 const createUser = (state) => {
   const newUser = Immutable.Map({
@@ -36,26 +37,46 @@ const createUser = (state) => {
     registered: false,
     userID: state.get('userList').size
   });
-  const newState = state.update('userList', userList => userList.push(newUser));
-  return newState.set('mainUserID', newUser.get('userID'));
+
+  return state.update('userList', userList => userList.push(newUser));
 };
 
-const deleteUser = (state, userID) => {
- // state.update()
-};
+const deleteUser = (state, userID) =>
+  state.update('userList', userList =>
+    userList.filter(user =>
+      user.get('userID') !== userID
+    )
+  )
+  .update('restaurants', restaurants =>
+    restaurants.map(restaurant =>
+      restaurant.update('users', users =>
+        users.filter(restaurantUserID => userID !== restaurantUserID)
+      )
+    )
+  );
 
 const setUsername = (state, userID, username) => {
-  console.log('ouiii', username, userID);
-  const newState = state
-  .updateIn(['userList', userID, 'username'], () => username)
-  .updateIn(['userList', userID, 'registered'], () => true);
-  return newState;
+  return state.update('userList', userList => {
+    return userList.map(userListEntry => {
+      if (userListEntry.get('userID') === userID) {
+        return userListEntry.set('username', username)
+        .set('registered', true);
+      }
+      else {
+        return userListEntry;
+      }
+    });
+  });
 };
 
 const addUserToRestaurant = (state, restaurantName, userID) => {
   const newState = removeUserFromAllRestaurants(state, userID);
+
   console.log(restaurantName, userID);
-  return newState.updateIn(['restaurants', restaurantName, 'users'], users => users.push(parseInt(userID)));
+
+  return newState.updateIn(['restaurants', restaurantName, 'users'], users =>
+    users.push(parseInt(userID))
+  );
 };
 
 const addRestaurant = (state, restaurantName, creatorID) => {
@@ -63,8 +84,10 @@ const addRestaurant = (state, restaurantName, creatorID) => {
     const newRestaurant = Immutable.Map({ name: restaurantName, users: Immutable.List() });
     const newRestaurants = Immutable.Map().set(restaurantName, newRestaurant);
     const newState = state.mergeIn(['restaurants'], newRestaurants);
+
     return addUserToRestaurant(newState, restaurantName, creatorID);
   }
+
   return state;
 };
 
@@ -92,5 +115,6 @@ export default (state = defaultState, action) => {
 
   default:
     return state;
+
   }
 };

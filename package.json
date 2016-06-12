@@ -25,6 +25,7 @@
     "babel-watch": "^2.0.2",
     "beepbeep": "^1.2.0",
     "browser-sync": "^2.12.4",
+    "chalk": "^1.1.3",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",

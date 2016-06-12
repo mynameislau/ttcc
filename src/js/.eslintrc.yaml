@@ -6,3 +6,29 @@ parserOptions:
     jsx: true
 env:
   browser: true
+
+rules:
+  quotes: [2, single]
+  sort-imports: 0
+  one-var: 0
+  no-unused-vars: 1
+  arrow-parens: 0
+  no-console: 1
+  indent: [2, 2]
+  padded-blocks: [2, { blocks: never, switches: always, classes: never }]
+  quote-props: 0
+  eol-last: 0
+  max-len: [2, 100]
+  no-magic-numbers: [2, { ignore: [1] }]
+  object-shorthand: [2, never]
+  object-curly-newline: 0 # object-curly-newline: [2, { multiline: true }]
+  object-curly-spacing: [2, always]
+  object-property-newline: [2, { allowMultiplePropertiesPerLine: true }]
+  arrow-body-style: 0
+
+
+  #project specific
+  new-cap: 0
+  dot-location: [2, property]
+  radix: 0
+

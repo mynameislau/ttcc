@@ -1,42 +1,56 @@
 import Server from 'socket.io';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import serverReducer from './reducers/serverReducer';
 import { createUser, deleteUser } from './serverActions';
+import { SOCKET_IO_PORT } from './config';
+import { logAction, logStateChange } from './logging';
 
-const io = new Server().attach(8090);
+console.log(SOCKET_IO_PORT);
+
+const io = new Server().attach(SOCKET_IO_PORT);
 
 const emitMiddleware = store => next => action => {
-  if (action.emit)
-  {
-    //io.emit('stateChanged', store.getSt);
+  if (action.emit) {
+    // io.emit('stateChanged', store.getSt);
   }
+
   return next(action);
 };
 
+const loggingMiddleware = store => next => action => {
+  logAction(action);
 
-const store = createStore(serverReducer, undefined, applyMiddleware(emitMiddleware));
+  return next(action);
+};
+
+const store = createStore(serverReducer, undefined, compose(
+  applyMiddleware(emitMiddleware),
+  applyMiddleware(loggingMiddleware)
+));
+
+
+store.subscribe(() => {
+  logStateChange(store.getState());
+  io.emit('serverStateChanged', store.getState());
+});
+
 
 io.on('connection', socket => {
-  console.log('connection');
-  // io.emit('state', store.getState());
+  console.log('new user connecting');
   store.dispatch(createUser());
   const userList = store.getState().get('userList');
-  const newUser = userList.get(userList.size - 1);
-  socket.emit('connected', newUser);
-  io.emit('stateChanged', store.getState());
+  const newUserID = userList.get(userList.size - 1).get('userID');
 
-  socket.on('action', action => {
-    console.log('action', action);
+  socket.emit('userSuccessfullyCreated', newUserID);
+  //io.emit('stateChanged', store.getState());
+
+  socket.on('clientAction', action => {
+    console.log('action with side effects sent from client', action);
     store.dispatch(action);
   });
 
   socket.on('disconnect', () => {
-    store.dispatch(deleteUser(newUser.get('userID')));
+    console.log('disconnecting socket');
+    store.dispatch(deleteUser(newUserID));
   });
 });
-
-store.subscribe(() => {
-  console.log('state changed !!!!');
-  io.emit('stateChanged', store.getState());
-});
-

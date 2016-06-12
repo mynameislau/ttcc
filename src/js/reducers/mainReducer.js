@@ -1,12 +1,9 @@
 import Immutable from 'immutable';
 
-import { getMainUser } from '../helpers';
-
 import {
   REMOVE_USER_FROM_RESTAURANT,
   ADD_RESTAURANT,
   ADD_USER_TO_RESTAURANT,
-  CREATE_USER,
   SET_USERNAME,
   SET_MAIN_USER,
   UPDATE_SERVER_STATE
@@ -18,60 +15,46 @@ const defaultState = Immutable.Map({
   userList: Immutable.List()
 });
 
-const removeUserFromAllRestaurants = (state, userID) =>
-  state.update('restaurants', restaurants =>
-    restaurants.map(restaurant =>
-      restaurant.update('users', users =>
-        users.filter(user => user !== userID)
-      )
-    )
-  );
 
 const removeUserFromRestaurant = (state, restaurantName, userID) =>
-  state.updateIn(['restaurants', restaurantName, 'users'], users => users.filter(user => user !== userID));
+  state.updateIn(['restaurants', restaurantName, 'users'], users =>
+    users.filter(user => user !== userID)
+  );
 
-const createUser = (state) => {
-  return state;
-};
 
 const setUsername = (state, userID, username) => {
   console.log('coté client', username, userID);
+
   return state;
 };
 
 const addRestaurant = (state, restaurantName, creatorID) => {
-  console.log('add restaurant', restaurantName, creatorID);
-  // if (!state.get('restaurants').get(restaurantName)) {
-  //   const newRestaurant = Immutable.Map({ name: restaurantName, users: Immutable.List() });
-  //   const newRestaurants = Immutable.Map().set(restaurantName, newRestaurant);
-  //   const newState = state.mergeIn(['restaurants'], newRestaurants);
-  //   return newState;
-  // }
+  console.log('add restaurant (remote)', restaurantName, creatorID);
+
   return state;
 };
 
-const setMainUser = (state, user) => {
-  console.log('setting user id', user.userID);
-  return state.set('mainUserID', user.userID);
+const setMainUser = (state, userID) => {
+  console.log('setting user id', userID);
+
+  return state.set('mainUserID', userID);
 };
 
 
 const updateServerState = (state, serverState) => {
+  console.log('ok serverState', serverState);
   return state.set('userList', Immutable.fromJS(serverState.userList))
   .set('restaurants', Immutable.fromJS(serverState.restaurants));
 };
 
 const addUserToRestaurant = (state, restaurantName, userID) => {
-  const newState = removeUserFromAllRestaurants(state, userID);
-  console.log(restaurantName, userID);
-  return newState.updateIn(['restaurants', restaurantName, 'users'], users => users.push(userID));
+  console.log('add user to restaurant (remote)', restaurantName, userID);
+
+  return state;
 };
 
 export default (state = defaultState, action) => {
   switch (action.type) {
-
-  case CREATE_USER:
-    return createUser(state);
 
   case SET_USERNAME:
     return setUsername(state, action.userID, action.username);
