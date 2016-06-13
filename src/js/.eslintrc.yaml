@@ -19,7 +19,7 @@ rules:
   quote-props: 0
   eol-last: 0
   max-len: [2, 100]
-  no-magic-numbers: [2, { ignore: [1] }]
+  no-magic-numbers: [2, { ignore: [1, 0] }]
   object-shorthand: [2, never]
   object-curly-newline: 0 # object-curly-newline: [2, { multiline: true }]
   object-curly-spacing: [2, always]

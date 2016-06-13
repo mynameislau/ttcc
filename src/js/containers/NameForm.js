@@ -5,8 +5,8 @@ import { checkForm, checkName } from '../form/form-validation';
 import { isLogged } from '../helpers';
 
 const mapStateToProps = state => ({
-  userList: state.main.get('userList'),
-  mainUserID: state.main.get('mainUserID')
+  userList: state.groups.get('userList'),
+  mainUserID: state.groups.get('mainUserID')
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -21,14 +21,20 @@ const mapDispatchToProps = dispatch => ({
   }
 });
 
-const component = ({ mode, check, userList, mainUserID }) =>
+const getLabel = (prompt, mainUserID, userList) => {
+  const defaultLabel = isLogged(mainUserID, userList) ? 'Changer de nom' : 'Se logger';
+
+  return prompt ? prompt : defaultLabel;
+};
+
+const component = ({ check, userList, mainUserID, prompt }) =>
   <form
-  className={ mode ? `name-form name-form--${mode}` : 'name-form' }
+  className="name-form"
   data-registered={ isLogged(mainUserID, userList) ? 'true' : 'false' }
   name="setUsername"
   noValidate
   onSubmit={(event) => check(event, userList, mainUserID)}>
-    <label htmlFor="change-name">Changer le nom</label>
+    <label htmlFor="change-name">{getLabel(prompt, mainUserID, userList)}</label>
     <input id="change-name" name="name" type="text" required />
     <input className="btn" type="submit" value="OK" />
   </form>;

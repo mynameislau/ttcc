@@ -6,6 +6,7 @@
   border-radius: 0.2em;
   width: 15em;
   animation: fadeIn 1s;
+  position: relative;
 }
 
 .card--ghost {
@@ -22,6 +23,12 @@
   font-weight: bold;
 }
 
+.card__title small {
+  font-weight: $regular;
+  font-size: 0.8em;
+  color: $greyLight;
+}
+
 .card__list {
   display: flex;
   flex-wrap: wrap;
@@ -32,4 +39,33 @@
   display: inline-block;
   vertical-align: top;
   margin: 1em;
+}
+
+.card__number,
+.card__delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(50%) translateY(-50%);
+  border: 0.3em solid white;
+  border-radius: 50%;
+  color: white;
+  width: 2.5em;
+  height: 2.5em;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  font-weight: bold;
+  box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+}
+
+.card__number {
+  background-color: $grey;
+}
+
+.card__delete {
+  background-color: #ea2049;
+  cursor: pointer;
 }

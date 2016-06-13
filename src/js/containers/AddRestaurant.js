@@ -7,8 +7,8 @@ import { restaurantExists } from '../helpers';
 
 
 const mapStateToProps = state => ({
-  restaurants: state.main.get('restaurants'),
-  mainUserID: state.main.get('mainUserID')
+  restaurants: state.groups.get('restaurants'),
+  mainUserID: state.groups.get('mainUserID')
 });
 
 const mapDispatchToProps = dispatch => ({

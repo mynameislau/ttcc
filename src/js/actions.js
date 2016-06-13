@@ -5,6 +5,7 @@ export const CREATE_USER = 'CREATE_USER';
 export const SET_USERNAME = 'SET_USERNAME';
 export const UPDATE_SERVER_STATE = 'UPDATE_SERVER_STATE';
 export const SET_MAIN_USER = 'SET_MAIN_USER';
+export const DELETE_RESTAURANT = 'DELETE_RESTAURANT';
 
 export const setMainUser = user => ({
   type: SET_MAIN_USER,
@@ -43,4 +44,10 @@ export const setUsername = (username, userID) => ({
   userID: userID,
   remote: true,
   emit: true
+});
+
+export const deleteRestaurant = (restaurantName) => ({
+  type: DELETE_RESTAURANT,
+  restaurantName: restaurantName,
+  remote: true
 });

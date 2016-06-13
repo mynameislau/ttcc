@@ -12,7 +12,8 @@ import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 import { SOCKET_IO_PORT } from './config';
 import io from 'socket.io-client';
 
-import mainReducer from './reducers/mainReducer';
+import groupsReducer from './reducers/groupsReducer';
+import UIReducer from './reducers/UIReducer';
 
 const socket = io(`${location.protocol}//${location.hostname}:${SOCKET_IO_PORT}`);
 
@@ -27,8 +28,9 @@ const remoteMiddleware = store => next => action => {
 
 const store = createStore(
   combineReducers({
-    main: mainReducer,
-    routing: routerReducer
+    groups: groupsReducer,
+    routing: routerReducer,
+    UI: UIReducer
   }),
   {},
   compose(

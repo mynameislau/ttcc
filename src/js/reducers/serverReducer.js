@@ -4,7 +4,8 @@ import {
   REMOVE_USER_FROM_RESTAURANT,
   ADD_RESTAURANT,
   ADD_USER_TO_RESTAURANT,
-  SET_USERNAME
+  SET_USERNAME,
+  DELETE_RESTAURANT
 } from '../actions';
 
 import {
@@ -83,6 +84,13 @@ const addRestaurant = (state, restaurantName, creatorID) => {
   return state;
 };
 
+const deleteRestaurant = (state, restaurantName) =>
+  state.update('restaurants', restaurants =>
+    restaurants.filter(restaurant =>
+      restaurant.get('name') !== restaurantName
+    )
+  );
+
 
 export default (state = defaultState, action) => {
   switch (action.type) {
@@ -104,6 +112,9 @@ export default (state = defaultState, action) => {
 
   case ADD_USER_TO_RESTAURANT:
     return addUserToRestaurant(state, action.restaurantName, action.userID);
+
+  case DELETE_RESTAURANT:
+    return deleteRestaurant(state, action.restaurantName);
 
   default:
     return state;

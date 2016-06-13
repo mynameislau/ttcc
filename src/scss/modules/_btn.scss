@@ -1,10 +1,10 @@
 .btn {
   border: 0;
 
-  background-color: #f5d823;
+  background-color: $yellow;
   color: #845d14;
   border: 0;
-  box-shadow: 0 4px #d6a859;
+  box-shadow: 0 4px $darkYellow;
   border-top: 1px solid #f9e14a;
   border-left: 1px solid #e4c102;
   border-right: 1px solid #e4c102;
@@ -22,7 +22,7 @@
 }
 
 .btn--cancel {
-  background-color: #ff9974;
+  background-color: $red;
   color: #803434;
   box-shadow: 0 4px #bf6f6c;
   border-top: 1px solid #d8a38d;
@@ -41,4 +41,14 @@
 .btn--full {
   display: block;
   width: 100%;
+}
+
+.btn--link-like {
+  background: none;
+  text-decoration: underline;
+  border: 0;
+  box-shadow: none;
+  color: $xlight;
+  font-weight: 400;
+  display: inline;
 }

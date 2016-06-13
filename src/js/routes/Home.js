@@ -5,26 +5,26 @@ import Restaurant from '../components/Restaurant';
 import UserList from '../components/UserList';
 import User from '../components/User';
 import NameForm from '../containers/NameForm';
-import { getMainUsername, isInRestaurant, isLogged } from '../helpers';
-import { addUserToRestaurant, removeUserFromRestaurant } from '../actions';
+import NameFormModal from '../containers/NameFormModal';
+import { getMainUsername, isInRestaurant, isLogged, isRestaurantEmpty } from '../helpers';
+import { addUserToRestaurant, removeUserFromRestaurant, deleteRestaurant } from '../actions';
 
 const mapStateToProps = state => ({
-  mainUsername: getMainUsername(state.main),
-  mainUserID: state.main.get('mainUserID'),
-  restaurantList: state.main.get('restaurants').valueSeq(),
-  userList: state.main.get('userList')
+  mainUsername: getMainUsername(state.groups),
+  mainUserID: state.groups.get('mainUserID'),
+  restaurantList: state.groups.get('restaurants').valueSeq(),
+  userList: state.groups.get('userList')
 });
 
 const mapDispatchToProps = dispatch => ({
-  add: (name, userID) => dispatch(addUserToRestaurant(name, userID)),
-  remove: (name, userID) => dispatch(removeUserFromRestaurant(name, userID))
+  addUser: (name, userID) => dispatch(addUserToRestaurant(name, userID)),
+  removeUser: (name, userID) => dispatch(removeUserFromRestaurant(name, userID)),
+  deleteRestaurant: (restaurantName) => dispatch(deleteRestaurant(restaurantName))
 });
 
-const component = ({ mainUsername, restaurantList, userList, add, remove, mainUserID }) =>
+const component = ({ mainUsername, restaurantList, userList, addUser, removeUser, mainUserID, deleteRestaurant }) =>
   <div>
-    <div className="global-layer">
-      <NameForm mode="modal"/>
-    </div>
+    <NameFormModal />
     <div className="header">
       <svg className="header__user-icon" role="presentation" title="" width="1.5em" height="1.5em">
         <use xlinkHref="assets/map.svg#user" />
@@ -42,8 +42,9 @@ const component = ({ mainUsername, restaurantList, userList, add, remove, mainUs
               restaurant={restaurant}
               userID={mainUserID}
               userList={userList}
-              add={isLogged(mainUserID, userList) && !isInRestaurant(restaurant, mainUserID) ? add : null}
-              remove={ isInRestaurant(restaurant, mainUserID) ? remove : null }
+              deleteRestaurant={ isLogged(mainUserID, userList) && isRestaurantEmpty(restaurant) ? deleteRestaurant : null }
+              addUser={ isLogged(mainUserID, userList) && !isInRestaurant(restaurant, mainUserID) ? addUser : null }
+              removeUser={ isInRestaurant(restaurant, mainUserID) ? removeUser : null }
             />
           </li>
         )}
