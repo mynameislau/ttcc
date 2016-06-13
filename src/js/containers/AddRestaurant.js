@@ -36,9 +36,9 @@ const mapDispatchToProps = dispatch => ({
 
 const component = ({ restaurants, check, mainUserID }) => {
   return <form class="add-restaurant" name="addRestaurant" noValidate onSubmit={ (event) => check(event, restaurants, mainUserID) }>
-    <label className="txt-input__label" for="add-restaurant">Ajouter un restaurant</label>
-    <input className="txt-input" id="add-restaurant" name="name" type="text" required />
-    <input className="btn" type="submit" value="Ajout" />
+    <label className="txt-input__label add-restaurant__label" for="add-restaurant">Ajouter un restaurant</label>
+    <input className="txt-input add-restaurant__input" id="add-restaurant" name="name" type="text" required />
+    <input className="btn add-restaurant__btn" type="submit" value="Ajout" />
   </form>
 };
 

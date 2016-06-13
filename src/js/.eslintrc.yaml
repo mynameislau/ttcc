@@ -25,6 +25,7 @@ rules:
   object-curly-spacing: [2, always]
   object-property-newline: [2, { allowMultiplePropertiesPerLine: true }]
   arrow-body-style: 0
+  no-ternary: 0
 
 
   #project specific

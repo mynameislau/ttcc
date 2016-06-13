@@ -23,7 +23,7 @@ input {
   font-size: 1em;
 }
 
-input:invalid {
+input[value]:not([value=""]):invalid {
   outline: 1px solid red;
 }
 

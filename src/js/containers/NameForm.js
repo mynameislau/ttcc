@@ -12,6 +12,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   check: (event, userList, mainUserID) => {
     const form = event.target;
+
     console.log(event, event.target);
     checkForm(event, [checkName(form.elements.name, userList)]).then(() => {
       console.log('2', event, event.target);
@@ -20,8 +21,13 @@ const mapDispatchToProps = dispatch => ({
   }
 });
 
-const component = ({check, userList, mainUserID}) =>
-  <form className="name-form" data-registered={isLogged(mainUserID, userList) ? 'true' : 'false' } name="setUsername" noValidate onSubmit={(event) => check(event, userList, mainUserID)}>
+const component = ({ mode, check, userList, mainUserID }) =>
+  <form
+  className={ mode ? `name-form name-form--${mode}` : 'name-form' }
+  data-registered={ isLogged(mainUserID, userList) ? 'true' : 'false' }
+  name="setUsername"
+  noValidate
+  onSubmit={(event) => check(event, userList, mainUserID)}>
     <label htmlFor="change-name">Changer le nom</label>
     <input id="change-name" name="name" type="text" required />
     <input className="btn" type="submit" value="OK" />

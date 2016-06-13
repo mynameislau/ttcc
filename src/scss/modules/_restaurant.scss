@@ -11,6 +11,7 @@
 .restaurant__user-list {
   padding: 2em;
   overflow: hidden;
+  flex-grow: 1;
 }
 
 .restaurant__user-list li {

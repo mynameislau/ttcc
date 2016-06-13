@@ -42,16 +42,10 @@ const createUser = (state) => {
 };
 
 const deleteUser = (state, userID) =>
-  state.update('userList', userList =>
+  removeUserFromAllRestaurants(state, userID)
+  .update('userList', userList =>
     userList.filter(user =>
       user.get('userID') !== userID
-    )
-  )
-  .update('restaurants', restaurants =>
-    restaurants.map(restaurant =>
-      restaurant.update('users', users =>
-        users.filter(restaurantUserID => userID !== restaurantUserID)
-      )
     )
   );
 
@@ -71,8 +65,6 @@ const setUsername = (state, userID, username) => {
 
 const addUserToRestaurant = (state, restaurantName, userID) => {
   const newState = removeUserFromAllRestaurants(state, userID);
-
-  console.log(restaurantName, userID);
 
   return newState.updateIn(['restaurants', restaurantName, 'users'], users =>
     users.push(parseInt(userID))

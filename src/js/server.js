@@ -42,7 +42,7 @@ io.on('connection', socket => {
   const newUserID = userList.get(userList.size - 1).get('userID');
 
   socket.emit('userSuccessfullyCreated', newUserID);
-  //io.emit('stateChanged', store.getState());
+  // io.emit('stateChanged', store.getState());
 
   socket.on('clientAction', action => {
     console.log('action with side effects sent from client', action);

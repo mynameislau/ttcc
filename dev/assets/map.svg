@@ -1,7 +1,7 @@
 <!-- svg symbol map -->
 <svg xmlns="http://www.w3.org/2000/svg">
   <symbol id="pen" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-  	 width="26px" height="26px" viewBox="0 0 26 26" style="all:inherit" enable-background="new 0 0 26 26" xml:space="preserve">
+  	 width="26px" height="26px" viewBox="0 0 26 26" style="all:inherit" enable-background="new 0 0 26 26" xml:space="preserve">
   <g>
   	<path fill="currentColor" d="M1.295,25.253c0.24,0,0.492-0.059,0.752-0.172l7.288-3.24c0.63-0.28,1.47-0.856,1.952-1.343L24.758,7.115
   		c0.385-0.385,0.596-0.895,0.596-1.438s-0.211-1.056-0.596-1.437l-3.643-3.646C20.731,0.212,20.221,0,19.676,0
@@ -12,7 +12,7 @@
 
   </symbol>
   <symbol id="user" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-  	 width="26px" height="28px" style="all:inherit;" viewBox="0 0 26 28" enable-background="new 0 0 26 28" xml:space="preserve">
+  	 width="26px" height="28px" style="all:inherit;" viewBox="0 0 26 28" enable-background="new 0 0 26 28" xml:space="preserve">
   <path fill="currentColor" d="M25.908,28c-0.309-4.68-3.435-8.976-7.404-10.998c2.215-1.743,3.639-4.441,3.639-7.479
   	C22.143,4.265,17.881,0,12.622,0C7.364,0,3.098,4.265,3.098,9.523c0,3.037,1.426,5.735,3.643,7.479C2.77,19.024,0.309,23.32,0,28
   	H25.908z"/>

@@ -17,7 +17,7 @@ import mainReducer from './reducers/mainReducer';
 const socket = io(`${location.protocol}//${location.hostname}:${SOCKET_IO_PORT}`);
 
 const remoteMiddleware = store => next => action => {
-  console.log('middle', action.type);
+  console.log('client action', action.type, action);
   if (action.remote) {
     socket.emit('clientAction', action);
   }

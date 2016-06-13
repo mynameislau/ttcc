@@ -42,7 +42,8 @@ const setMainUser = (state, userID) => {
 
 
 const updateServerState = (state, serverState) => {
-  console.log('ok serverState', serverState);
+  console.log('server state update', serverState);
+
   return state.set('userList', Immutable.fromJS(serverState.userList))
   .set('restaurants', Immutable.fromJS(serverState.restaurants));
 };

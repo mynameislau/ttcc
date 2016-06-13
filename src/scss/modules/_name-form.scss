@@ -1,0 +1,24 @@
+.name-form--modal[data-registered="false"] {
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name-form--modal[data-registered="true"] {
+  display: none;
+}
+
+.name-form label {
+  margin-right: 1em;
+}
+
+.name-form .btn {
+  margin-left: 1em;
+}
