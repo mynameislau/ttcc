@@ -13,8 +13,9 @@ var deleteUser = exports.deleteUser = function deleteUser(userID) {
   };
 };
 
-var createUser = exports.createUser = function createUser() {
+var createUser = exports.createUser = function createUser(userID) {
   return {
-    type: CREATE_USER
+    type: CREATE_USER,
+    userID: userID
   };
 };

@@ -32,11 +32,11 @@ const removeUserFromRestaurant = (state, restaurantName, userID) =>
     users.filter(user => user !== userID)
   );
 
-const createUser = (state) => {
+const createUser = (state, newUserID) => {
   const newUser = Immutable.Map({
     username: 'anonymous',
     registered: false,
-    userID: state.get('userList').size
+    userID: newUserID
   });
 
   return state.update('userList', userList => userList.push(newUser));
@@ -50,19 +50,18 @@ const deleteUser = (state, userID) =>
     )
   );
 
-const setUsername = (state, userID, username) => {
-  return state.update('userList', userList => {
-    return userList.map(userListEntry => {
-      if (userListEntry.get('userID') === userID) {
-        return userListEntry.set('username', username)
+const setUsername = (state, userID, username) =>
+  state.update('userList', userList =>
+    userList.map(user => {
+      if (user.get('userID') === userID) {
+        return user.set('username', username)
         .set('registered', true);
       }
       else {
-        return userListEntry;
+        return user;
       }
-    });
-  });
-};
+    })
+  );
 
 const addUserToRestaurant = (state, restaurantName, userID) => {
   const newState = removeUserFromAllRestaurants(state, userID);
@@ -96,7 +95,7 @@ export default (state = defaultState, action) => {
   switch (action.type) {
 
   case CREATE_USER:
-    return createUser(state);
+    return createUser(state, action.userID);
 
   case DELETE_USER:
     return deleteUser(state, action.userID);

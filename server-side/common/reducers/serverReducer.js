@@ -39,11 +39,11 @@ var removeUserFromRestaurant = function removeUserFromRestaurant(state, restaura
   });
 };
 
-var createUser = function createUser(state) {
+var createUser = function createUser(state, newUserID) {
   var newUser = _immutable2.default.Map({
     username: 'anonymous',
     registered: false,
-    userID: state.get('userList').size
+    userID: newUserID
   });
 
   return state.update('userList', function (userList) {
@@ -61,11 +61,11 @@ var deleteUser = function deleteUser(state, userID) {
 
 var setUsername = function setUsername(state, userID, username) {
   return state.update('userList', function (userList) {
-    return userList.map(function (userListEntry) {
-      if (userListEntry.get('userID') === userID) {
-        return userListEntry.set('username', username).set('registered', true);
+    return userList.map(function (user) {
+      if (user.get('userID') === userID) {
+        return user.set('username', username).set('registered', true);
       } else {
-        return userListEntry;
+        return user;
       }
     });
   });
@@ -106,7 +106,7 @@ exports.default = function () {
   switch (action.type) {
 
     case _serverActions.CREATE_USER:
-      return createUser(state);
+      return createUser(state, action.userID);
 
     case _serverActions.DELETE_USER:
       return deleteUser(state, action.userID);

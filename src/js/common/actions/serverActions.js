@@ -6,6 +6,7 @@ export const deleteUser = userID => ({
   userID: userID
 });
 
-export const createUser = () => ({
-  type: CREATE_USER
+export const createUser = userID => ({
+  type: CREATE_USER,
+  userID: userID
 });

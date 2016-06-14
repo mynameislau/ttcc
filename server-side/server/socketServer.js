@@ -19,6 +19,8 @@ var _serverActions = require('../common/actions/serverActions');
 
 var _logging = require('../common/logging');
 
+var _helpers = require('../common/helpers');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var startSocketServer = exports.startSocketServer = function startSocketServer(server) {
@@ -55,9 +57,10 @@ var startSocketServer = exports.startSocketServer = function startSocketServer(s
 
   io.on('connection', function (socket) {
     console.log('new user connecting');
-    store.dispatch((0, _serverActions.createUser)());
     var userList = store.getState().get('userList');
-    var newUserID = userList.get(userList.size - 1).get('userID');
+    var newUserID = (0, _helpers.getNewUniqueID)(userList);
+
+    store.dispatch((0, _serverActions.createUser)(newUserID));
 
     socket.emit('userSuccessfullyCreated', newUserID);
     // io.emit('stateChanged', store.getState());

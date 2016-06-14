@@ -36,3 +36,11 @@ export const isRestaurantEmpty = (restaurant) =>
 export const reduceUserListToUser = (userList, userID) => userList.reduce((prev, curr) => {
   return curr.get('userID') === userID ? curr : prev;
 });
+
+export const getNewUniqueID = (userList) => {
+  const userWithHighestID = userList.reduce((prev, curr) => {
+    return Number(prev.get('userID')) > Number(curr.get('userID')) ? prev : curr;
+  });
+
+  return userWithHighestID ? Number(userWithHighestID.get('userID')) + 1 : 0;
+};

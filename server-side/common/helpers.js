@@ -47,3 +47,11 @@ var reduceUserListToUser = exports.reduceUserListToUser = function reduceUserLis
     return curr.get('userID') === userID ? curr : prev;
   });
 };
+
+var getNewUniqueID = exports.getNewUniqueID = function getNewUniqueID(userList) {
+  var userWithHighestID = userList.reduce(function (prev, curr) {
+    return Number(prev.get('userID')) > Number(curr.get('userID')) ? prev : curr;
+  });
+
+  return userWithHighestID ? Number(userWithHighestID.get('userID')) + 1 : 0;
+};

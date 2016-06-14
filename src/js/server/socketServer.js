@@ -3,6 +3,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import serverReducer from '../common/reducers/serverReducer';
 import { createUser, deleteUser } from '../common/actions/serverActions';
 import { logAction, logStateChange } from '../common/logging';
+import { getNewUniqueID } from '../common/helpers';
 
 export const startSocketServer = (server) => {
   const io = new SocketIO(server);
@@ -36,9 +37,10 @@ export const startSocketServer = (server) => {
 
   io.on('connection', socket => {
     console.log('new user connecting');
-    store.dispatch(createUser());
     const userList = store.getState().get('userList');
-    const newUserID = userList.get(userList.size - 1).get('userID');
+    const newUserID = getNewUniqueID(userList);
+
+    store.dispatch(createUser(newUserID));
 
     socket.emit('userSuccessfullyCreated', newUserID);
     // io.emit('stateChanged', store.getState());
