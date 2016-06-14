@@ -30,5 +30,4 @@ app.use(_express2.default.static('dev'));
 var server = app.listen(app.get('port'), function () {
   return console.log('listening on port ' + app.get('port'));
 });
-console.log('okkk');
 (0, _socketServer.startSocketServer)(server);

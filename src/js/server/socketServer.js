@@ -4,11 +4,8 @@ import serverReducer from '../common/reducers/serverReducer';
 import { createUser, deleteUser } from '../common/actions/serverActions';
 import { logAction, logStateChange } from '../common/logging';
 
-console.log('bvla');
-
 export const startSocketServer = (server) => {
   const io = new SocketIO(server);
-  console.log('yeaah');
 
 
   const emitMiddleware = store => next => action => {

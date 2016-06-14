@@ -18,5 +18,4 @@ app.set('port', (process.env.PORT || 5000));
 app.use(express.static('dev'));
 
 const server = app.listen(app.get('port'), () => console.log(`listening on port ${app.get('port')}`));
-console.log('okkk');
 startSocketServer(server);

@@ -15,58 +15,50 @@ import io from 'socket.io-client';
 import groupsReducer from '../common/reducers/groupsReducer';
 import UIReducer from '../common/reducers/UIReducer';
 
-fetch('/config/', {
-  method: 'get'
-})
-.then(response =>
-  response.json()
-)
-.then(JSObject => {
-  // const SOCKET_IO_PORT = JSObject.port;
-  const socket = io(); // `${location.protocol}//${location.hostname}:${SOCKET_IO_PORT}`);
+const socket = io();
+// `${location.protocol}//${location.hostname}:${SOCKET_IO_PORT}`);
 
-  const remoteMiddleware = store => next => action => {
-    console.log('client action', action.type, action);
-    if (action.remote) {
-      socket.emit('clientAction', action);
-    }
+const remoteMiddleware = store => next => action => {
+  console.log('client action', action.type, action);
+  if (action.remote) {
+    socket.emit('clientAction', action);
+  }
 
-    return next(action);
-  };
+  return next(action);
+};
 
-  const store = createStore(
-    combineReducers({
-      groups: groupsReducer,
-      routing: routerReducer,
-      UI: UIReducer
-    }),
-    {},
-    compose(
-      // applyMiddleware(thunk),
-      applyMiddleware(remoteMiddleware),
-      window.devToolsExtension ? window.devToolsExtension() : f => f
-    )
-  );
+const store = createStore(
+  combineReducers({
+    groups: groupsReducer,
+    routing: routerReducer,
+    UI: UIReducer
+  }),
+  {},
+  compose(
+    // applyMiddleware(thunk),
+    applyMiddleware(remoteMiddleware),
+    window.devToolsExtension ? window.devToolsExtension() : f => f
+  )
+);
 
-  socket.on('serverStateChanged', state =>
-    store.dispatch(updateServerState(state))
-  );
+socket.on('serverStateChanged', state =>
+  store.dispatch(updateServerState(state))
+);
 
-  socket.on('userSuccessfullyCreated', userID => {
-    console.log('user is', userID);
-    store.dispatch(setMainUser(userID));
-  });
-
-  const history = syncHistoryWithStore(browserHistory, store);
-
-  ReactDOM.render(
-    <Provider store={store}>
-      <Router history={history}>
-        <Route path="/" component={Home} />
-        <Route path="foo" component={About} />
-        <Route path="bar" component={NoMatch} />
-      </Router>
-    </Provider>,
-    document.getElementById('app')
-  );
+socket.on('userSuccessfullyCreated', userID => {
+  console.log('user is', userID);
+  store.dispatch(setMainUser(userID));
 });
+
+const history = syncHistoryWithStore(browserHistory, store);
+
+ReactDOM.render(
+  <Provider store={store}>
+    <Router history={history}>
+      <Route path="/" component={Home} />
+      <Route path="foo" component={About} />
+      <Route path="bar" component={NoMatch} />
+    </Router>
+  </Provider>,
+  document.getElementById('app')
+);

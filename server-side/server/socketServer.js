@@ -21,11 +21,8 @@ var _logging = require('../common/logging');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-console.log('bvla');
-
 var startSocketServer = exports.startSocketServer = function startSocketServer(server) {
   var io = new _socket2.default(server);
-  console.log('yeaah');
 
   var emitMiddleware = function emitMiddleware(store) {
     return function (next) {
