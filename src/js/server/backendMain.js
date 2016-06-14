@@ -2,8 +2,6 @@ import { startSocketServer } from './socketServer';
 import express from 'express';
 import path from 'path';
 
-console.log('socket server started');
-
 var app = express();
 
 // app.get('/', (req, res) => {
@@ -19,6 +17,6 @@ app.get('/config/', (req, res) => {
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static('dev'));
 
-app.listen(app.get('port'), () => console.log(`listening on port ${app.get('port')}`));
-
-startSocketServer(app);
+const server = app.listen(app.get('port'), () => console.log(`listening on port ${app.get('port')}`));
+console.log('okkk');
+startSocketServer(server);

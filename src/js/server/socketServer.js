@@ -4,8 +4,12 @@ import serverReducer from '../common/reducers/serverReducer';
 import { createUser, deleteUser } from '../common/actions/serverActions';
 import { logAction, logStateChange } from '../common/logging';
 
-export const startSocketServer = (server) => new Promise((resolve, reject) => {
+console.log('bvla');
+
+export const startSocketServer = (server) => {
   const io = new SocketIO(server);
+  console.log('yeaah');
+
 
   const emitMiddleware = store => next => action => {
     if (action.emit) {
@@ -52,6 +56,4 @@ export const startSocketServer = (server) => new Promise((resolve, reject) => {
       store.dispatch(deleteUser(newUserID));
     });
   });
-
-  resolve();
-});
+};
