@@ -6,12 +6,12 @@ import {
   ADD_USER_TO_RESTAURANT,
   SET_USERNAME,
   DELETE_RESTAURANT
-} from '../actions';
+} from '../actions/actions';
 
 import {
   CREATE_USER,
   DELETE_USER
-} from '../serverActions';
+} from '../actions/serverActions';
 
 const defaultState = Immutable.Map({
   restaurants: Immutable.Map(),

@@ -4,12 +4,96 @@
 		"selected_items":
 		[
 			[
-				"up",
-				"update"
+				"bac",
+				"background-color"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"def",
+				"defaultLabel"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"modal",
+				"modal--visible"
+			],
+			[
+				"grou",
+				"groupsReducer"
+			],
+			[
+				"ui",
+				"UIReducer"
+			],
+			[
+				"NA",
+				"NameFormModal"
+			],
+			[
+				"Name",
+				"NameFormModal"
+			],
+			[
+				"defa",
+				"defaultState"
+			],
+			[
+				"z-",
+				"z-index"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"rest",
+				"restaurants"
+			],
+			[
+				"dele",
+				"deleteRestaurant"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"DEL",
+				"DELETE_RESTAURANT"
+			],
+			[
+				"del",
+				"DELETE_RESTAURANT"
 			],
 			[
 				"user",
-				"userID"
+				"userList"
+			],
+			[
+				"re",
+				"reduceUserListToUser"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"name",
+				"name__form"
+			],
+			[
+				"remov",
+				"removeUserFromAllRestaurants"
+			],
+			[
+				"up",
+				"update"
 			],
 			[
 				"ch",
@@ -40,14 +124,6 @@
 				"restaurants"
 			],
 			[
-				"rest",
-				"restaurant"
-			],
-			[
-				"font",
-				"font-weight"
-			],
-			[
 				"pad",
 				"padding"
 			],
@@ -62,10 +138,6 @@
 			[
 				"web",
 				"webpackConfig"
-			],
-			[
-				"bac",
-				"background-color"
 			],
 			[
 				"webp",
@@ -128,10 +200,6 @@
 				"babel-preset-es2015-node"
 			],
 			[
-				"ret",
-				"restaurantName"
-			],
-			[
 				"get",
 				"getUser"
 			],
@@ -158,10 +226,6 @@
 			[
 				"red",
 				"renderParam"
-			],
-			[
-				"def",
-				"defaultFontSize"
 			],
 			[
 				"repl",
@@ -228,10 +292,6 @@
 				"padding"
 			],
 			[
-				"z-",
-				"z-header"
-			],
-			[
 				"maw",
 				"max-width"
 			],
@@ -258,10 +318,6 @@
 			[
 				"optimi",
 				"optimizeIMG"
-			],
-			[
-				"tex",
-				"text-align"
 			],
 			[
 				"bi",
@@ -342,10 +398,6 @@
 			[
 				"TAB",
 				"table-cell"
-			],
-			[
-				"text",
-				"text-transform"
 			],
 			[
 				"bo",
@@ -462,133 +514,25 @@
 			[
 				"inline",
 				"inline"
-			],
-			[
-				"pren",
-				"preventDefault"
-			],
-			[
-				"sho",
-				"showReportInfos"
-			],
-			[
-				"report",
-				"reportInfos"
-			],
-			[
-				"MIN",
-				"min-height"
-			],
-			[
-				"tab",
-				"table-cell"
-			],
-			[
-				"border-",
-				"border-thin-light"
-			],
-			[
-				"section",
-				"sectionID"
-			],
-			[
-				"show",
-				"showSection"
-			],
-			[
-				"col",
-				"color-lightest"
-			],
-			[
-				"clor",
-				"color-contrast-altB"
-			],
-			[
-				"borde",
-				"border-thin-light"
-			],
-			[
-				"mar",
-				"margin"
-			],
-			[
-				"bord",
-				"border-thin-light"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "src/js/client.js",
+			"file": "webpack.config.js",
 			"settings":
 			{
-				"buffer_size": 2934,
+				"buffer_size": 946,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/js/routes/Home.js",
+			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 2190,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/reducers/mainReducer.js",
-			"settings":
-			{
-				"buffer_size": 2799,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/server.js",
-			"settings":
-			{
-				"buffer_size": 1112,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/reducers/serverReducer.js",
-			"settings":
-			{
-				"buffer_size": 2772,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/actions.js",
-			"settings":
-			{
-				"buffer_size": 1230,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/components/Restaurant.js",
-			"settings":
-			{
-				"buffer_size": 753,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/components/User.js",
-			"settings":
-			{
-				"buffer_size": 128,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/components/UserList.js",
-			"settings":
-			{
-				"buffer_size": 268,
-				"line_ending": "Windows"
+				"buffer_size": 1543,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -599,8 +543,8 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 361.0,
-		"last_filter": "syntaco",
+		"height": 392.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -700,10 +644,41 @@
 	],
 	"file_history":
 	[
+		"/C/www/ttcc/dev/js/client.min.js",
+		"/C/www/ttcc/src/js/containers/NameFormModal.js",
+		"/C/www/ttcc/src/js/containers/NameForm.js",
+		"/C/www/ttcc/src/scss/utils/_variables.scss",
+		"/C/www/ttcc/src/scss/modules/_btn.scss",
+		"/C/www/ttcc/src/scss/modules/_modal.scss",
+		"/C/www/ttcc/src/js/components/Modal.js",
+		"/C/www/ttcc/src/js/helpers.js",
+		"/C/www/ttcc/src/js/routes/Home.js",
+		"/C/www/ttcc/src/scss/modules/_delete-btn.scss",
+		"/C/www/ttcc/src/scss/base/_base.scss",
+		"/C/www/ttcc/src/js/components/Restaurant.js",
+		"/C/www/ttcc/src/scss/modules/_card.scss",
+		"/C/www/ttcc/src/scss/modules/_restaurant.scss",
+		"/C/www/ttcc/src/scss/main.scss",
+		"/C/www/ttcc/src/js/actions/UIActions.js",
+		"/C/www/ttcc/src/js/reducers/UIReducer.js",
+		"/C/www/ttcc/src/js/client.js",
+		"/C/www/ttcc/src/js/actions.js",
+		"/C/www/ttcc/src/js/containers/AddRestaurant.js",
+		"/C/www/ttcc/src/scss/modules/_name-form.scss",
+		"/C/www/ttcc/src/js/components/Button.js",
+		"/C/www/ttcc/src/js/reducers/mainReducer.js",
+		"/C/www/ttcc/src/js/reducers/restaurantReducer.js",
+		"/C/www/ttcc/src/scss/modules/_global-layer.scss",
+		"/C/www/ttcc/src/js/reducers/serverReducer.js",
+		"/C/www/ttcc/src/js/.eslintrc.yaml",
+		"/C/www/ttcc/src/scss/modules/_txt-input.scss",
+		"/C/www/ttcc/src/scss/modules/_add-restaurant.scss",
+		"/C/www/ttcc/package.json",
+		"/C/www/ttcc/src/js/server.js",
+		"/C/www/ttcc/src/js/components/User.js",
+		"/C/www/ttcc/src/js/components/UserList.js",
 		"/C/www/ttcc/.eslintrc.yaml",
 		"/C/www/ttcc/src/js/serverActions.js",
-		"/C/www/ttcc/src/js/reducers/serverReducer.js",
-		"/C/www/ttcc/src/js/server.js",
 		"/C/www/mymarseille/_server/logs/error.log",
 		"/C/www/mymarseille/var/logs/dev/dev.log",
 		"/C/www/mymarseille/var/logs/dev/dev-error.log",
@@ -715,44 +690,24 @@
 		"/C/scalamp/vhosts/cndp/sites/dev.garants/settings.php",
 		"/C/scalamp/vhosts/cndp/sites/sites.php",
 		"/C/www/ttcc/src/js/form/form-validation.js",
-		"/C/www/ttcc/src/scss/modules/_global-layer.scss",
-		"/C/www/ttcc/src/scss/modules/_name-form.scss",
-		"/C/www/ttcc/src/scss/base/_base.scss",
-		"/C/www/ttcc/src/scss/main.scss",
-		"/C/www/ttcc/src/js/containers/NameForm.js",
 		"/C/scalamp/vhosts/met/sites/all/modules/me/me_profil_sante/me_profil_sante.module.mine",
 		"/C/scalamp/vhosts/met/sites/all/modules/me/me_profil_sante/me_profil_sante.module",
 		"/C/www/ttcc/src/js/form/formValidation.js",
-		"/C/www/ttcc/src/scss/modules/_restaurant.scss",
-		"/C/www/ttcc/src/scss/modules/_card.scss",
-		"/C/www/ttcc/src/scss/modules/_txt-input.scss",
-		"/C/www/ttcc/src/js/containers/AddRestaurant.js",
-		"/C/www/ttcc/src/scss/modules/_add-restaurant.scss",
-		"/C/www/ttcc/src/js/components/Restaurant.js",
-		"/C/www/ttcc/src/js/routes/Home.js",
 		"/C/www/ttcc/src/scss/modules/_header.scss",
 		"/C/www/ttcc/src/svg-map/pen.svg",
 		"/C/www/ttcc/src/svg-map/user.svg",
 		"/C/www/ttcc/dev/assets/map.svg",
-		"/C/www/ttcc/src/scss/modules/_btn.scss",
-		"/C/www/ttcc/src/js/client.js",
-		"/C/www/ttcc/src/js/reducers/mainReducer.js",
-		"/C/www/ttcc/src/js/helpers.js",
 		"/C/www/ttcc/src/scss/base/_animations.scss",
 		"/C/www/ttcc/src/index.html",
-		"/C/www/ttcc/src/scss/utils/_variables.scss",
-		"/C/www/ttcc/package.json",
 		"/C/www/ttcc/webpack.config.js",
 		"/C/www/ttcc/testNodeWebpack.js",
 		"/C/www/ttcc/dev/index.html",
 		"/C/www/ttcc/gulpfile.js",
 		"/C/www/ttcc/src/scss/modules/_submit-btn.scss",
 		"/C/www/ttcc/src/scss/_base.scss",
-		"/C/www/ttcc/src/js/components/User.js",
 		"/C/www/ttcc/tasks/assets.js",
 		"/C/www/ttcc/tasks/html.js",
 		"/C/www/ttcc/tasks/css.js",
-		"/C/www/ttcc/src/js/actions.js",
 		"/C/www/ttcc/tasks/map-svg.js",
 		"/C/www/wiko-store/magento/app/etc/local.xml",
 		"/C/www/wiko-store/magento/skin/frontend/rwd/scala/js/app.js",
@@ -781,7 +736,6 @@
 		"/C/www/ttcc/src/js/components/NameForm.js",
 		"/C/www/ttcc/src/js/components/AddRestaurant.js",
 		"/C/www/ttcc/src/js/store.js",
-		"/C/www/ttcc/src/js/.eslintrc.yaml",
 		"/C/www/ttcc/src/js/components/Layout.js",
 		"/C/www/ttcc/src/js/components/NumUpdater.js",
 		"/C/php-5.3.23-apache-2.2.23/httpd/conf/httpd.conf",
@@ -817,17 +771,7 @@
 		"/C/Users/lfalda/AppData/Roaming/npm/node_modules/eslint-config-airbnb/rules/es6.js",
 		"/C/Users/lfalda/AppData/Roaming/npm/node_modules/eslint-config-airbnb/rules/style.js",
 		"/C/Users/lfalda/AppData/Roaming/npm/node_modules/eslint-config-airbnb/rules/strict.js",
-		"/C/Users/lfalda/AppData/Roaming/npm/node_modules/eslint-config-airbnb/rules/variables.js",
-		"/C/Users/lfalda/AppData/Roaming/npm/node_modules/eslint-config-airbnb/.eslintrc",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/html/content/_pages/index.md",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/html/partials/site-footer.hbs",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/html/partials/news-block.hbs",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/html/partials/events-block.hbs",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/html/content/_pages/report.md",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/html/content/_pages/informations.md",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/html/content/_pages/account-management.md",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/html/content/_pages/test-sticky.html",
-		"/C/scalamp/vhosts/bea-web/typo3conf/ext/bea_theme/templates/maquettes/src/js/flow/script.js"
+		"/C/Users/lfalda/AppData/Roaming/npm/node_modules/eslint-config-airbnb/rules/variables.js"
 	],
 	"find":
 	{
@@ -869,6 +813,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"state.main.groups",
+			"state.main",
+			"console.log(",
 			"garant",
 			";",
 			"reject",
@@ -993,10 +940,7 @@
 			"active",
 			"input type=\"image\" src=\"typo3conf/ext/bea_theme/templates/maquettes/dev/img/ui/m-glass.svg\"",
 			"input type=\"image\"",
-			"active",
-			"ac",
-			"footer-b__element--link-list",
-			"data-entry-link"
+			"active"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1004,6 +948,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"state.groups",
+			"state.main.groups",
 			".get('mainUserID'",
 			"bodyElem",
 			"http://placehold.it/$1x$2",
@@ -1049,84 +995,24 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/js/client.js",
+					"file": "webpack.config.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2934,
+						"buffer_size": 946,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								364,
-								372
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 858.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/js/routes/Home.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2190,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1956,
-								1956
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 78.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/js/reducers/mainReducer.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2799,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								210,
-								210
+								743,
+								743
 							]
 						],
 						"settings":
@@ -1143,179 +1029,33 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "src/js/server.js",
-					"semi_transient": true,
+					"buffer": 1,
+					"file": "package.json",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1112,
+						"buffer_size": 1543,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								198,
-								198
+								745,
+								745
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JSON (JavaScriptNext).tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 312.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/js/reducers/serverReducer.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2772,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1101,
-								1101
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 312.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/js/actions.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1230,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								455,
-								455
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 312.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/js/components/Restaurant.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 753,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								457,
-								457
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/js/components/User.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 128,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								128,
-								128
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "src/js/components/UserList.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 268,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -1370,32 +1110,140 @@
 		"selected_items":
 		[
 			[
-				"server",
-				"src\\js\\reducers\\serverReducer.js"
-			],
-			[
-				"action",
-				"src\\js\\serverActions.js"
-			],
-			[
-				"form",
-				"src\\js\\form\\form-validation.js"
-			],
-			[
-				"nam",
-				"src\\js\\containers\\NameForm.js"
+				"web",
+				"webpack.config.js"
 			],
 			[
 				"bas",
 				"src\\scss\\base\\_base.scss"
 			],
 			[
-				"name",
-				"src\\scss\\modules\\_name-form.scss"
+				"card",
+				"src\\scss\\modules\\_card.scss"
+			],
+			[
+				"resta",
+				"src\\js\\components\\Restaurant.js"
+			],
+			[
+				"dele",
+				"src\\scss\\modules\\_delete-btn.scss"
+			],
+			[
+				"btn",
+				"src\\scss\\modules\\_btn.scss"
+			],
+			[
+				"rhome",
+				"src\\js\\routes\\Home.js"
 			],
 			[
 				"main",
 				"src\\scss\\main.scss"
+			],
+			[
+				"varia",
+				"src\\scss\\utils\\_variables.scss"
+			],
+			[
+				"modal",
+				"src\\scss\\modules\\_modal.scss"
+			],
+			[
+				"help",
+				"src\\js\\helpers.js"
+			],
+			[
+				"",
+				"src\\js\\containers\\NameFormModal.js"
+			],
+			[
+				"ui",
+				"src\\js\\actions\\UIActions.js"
+			],
+			[
+				"moda",
+				"src\\js\\components\\Modal.js"
+			],
+			[
+				"name",
+				"src\\scss\\modules\\_name-form.scss"
+			],
+			[
+				"btn.js",
+				"src\\js\\components\\Button.js"
+			],
+			[
+				"home",
+				"src\\js\\routes\\Home.js"
+			],
+			[
+				"client",
+				"src\\js\\client.js"
+			],
+			[
+				"actions",
+				"src\\js\\actions.js"
+			],
+			[
+				"vari",
+				"src\\scss\\utils\\_variables.scss"
+			],
+			[
+				"glob",
+				"src\\scss\\modules\\_global-layer.scss"
+			],
+			[
+				"ser",
+				"src\\js\\reducers\\serverReducer.js"
+			],
+			[
+				"mainre",
+				"src\\js\\reducers\\mainReducer.js"
+			],
+			[
+				"action",
+				"src\\js\\actions.js"
+			],
+			[
+				"esl",
+				"src\\js\\.eslintrc.yaml"
+			],
+			[
+				"hel",
+				"src\\js\\helpers.js"
+			],
+			[
+				"txt",
+				"src\\scss\\modules\\_txt-input.scss"
+			],
+			[
+				"add",
+				"src\\scss\\modules\\_add-restaurant.scss"
+			],
+			[
+				"server",
+				"src\\js\\server.js"
+			],
+			[
+				"nam",
+				"src\\js\\containers\\NameForm.js"
+			],
+			[
+				"global",
+				"src\\scss\\modules\\_global-layer.scss"
+			],
+			[
+				"addr",
+				"src\\js\\containers\\AddRestaurant.js"
+			],
+			[
+				"add-",
+				"src\\scss\\modules\\_add-restaurant.scss"
+			],
+			[
+				"form",
+				"src\\js\\form\\form-validation.js"
 			],
 			[
 				"user",
@@ -1414,40 +1262,8 @@
 				"src\\scss\\modules\\_txt-input.scss"
 			],
 			[
-				"addr",
-				"src\\scss\\modules\\_add-restaurant.scss"
-			],
-			[
-				"add",
-				"src\\js\\containers\\AddRestaurant.js"
-			],
-			[
-				"card",
-				"src\\scss\\modules\\_card.scss"
-			],
-			[
-				"home",
-				"src\\js\\routes\\Home.js"
-			],
-			[
-				"resta",
-				"src\\js\\components\\Restaurant.js"
-			],
-			[
-				"client",
-				"src\\js\\client.js"
-			],
-			[
 				"serverre",
 				"src\\js\\reducers\\serverReducer.js"
-			],
-			[
-				"help",
-				"src\\js\\helpers.js"
-			],
-			[
-				"btn",
-				"src\\scss\\modules\\_btn.scss"
 			],
 			[
 				"var",
@@ -1464,10 +1280,6 @@
 			[
 				"gul",
 				"gulpfile.js"
-			],
-			[
-				"web",
-				"webpack.config.js"
 			],
 			[
 				"pack",
@@ -1496,10 +1308,6 @@
 			[
 				"serv",
 				"src\\js\\server.js"
-			],
-			[
-				"actions",
-				"src\\js\\actions.js"
 			],
 			[
 				"ret",
@@ -1538,10 +1346,6 @@
 				"src\\js\\store.js"
 			],
 			[
-				"esl",
-				".eslintrc.yaml"
-			],
-			[
 				"us",
 				"src\\js\\components\\User.js"
 			],
@@ -1568,10 +1372,6 @@
 			[
 				"grunt",
 				"Gruntfile.js"
-			],
-			[
-				"varia",
-				"src\\scss\\tools\\_variables.scss"
 			],
 			[
 				"site",
@@ -1754,10 +1554,6 @@
 				"js\\script.js"
 			],
 			[
-				"vari",
-				"scss\\tools\\_variables.scss"
-			],
-			[
 				"head",
 				"scss\\modules\\_header.scss"
 			],
@@ -1824,62 +1620,6 @@
 			[
 				"sear",
 				"scss\\modules\\_search-entries.scss"
-			],
-			[
-				"even",
-				"html\\partials\\events-block.hbs"
-			],
-			[
-				"entr",
-				"scss\\modules\\_entries-block.scss"
-			],
-			[
-				"entri",
-				"scss\\modules\\_entries-block.scss"
-			],
-			[
-				"event",
-				"html\\partials\\event-block-article.hbs"
-			],
-			[
-				"brea",
-				"scss\\modules\\_breadcrumbs.scss"
-			],
-			[
-				"pu",
-				"scss\\pages\\_publishing.scss"
-			],
-			[
-				"pres",
-				"scss\\pages\\_press.scss"
-			],
-			[
-				"noti",
-				"scss\\pages\\_notified-events.scss"
-			],
-			[
-				"file",
-				"scss\\modules\\_filters.scss"
-			],
-			[
-				"hea",
-				"html\\partials\\site-header.hbs"
-			],
-			[
-				"repor",
-				"html\\content\\_pages\\report.md"
-			],
-			[
-				"dow",
-				"icon\\grunt_svg\\download.svg"
-			],
-			[
-				"tab",
-				"scss\\modules\\_tabs.scss"
-			],
-			[
-				"report",
-				"scss\\pages\\_investigation-report.scss"
 			]
 		],
 		"width": 0.0
