@@ -19,7 +19,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
   app.use(_express2.default.static('dev'));
 
-  var httpPort = 4567;
+  var httpPort = 5000;
   app.listen(httpPort, function () {
     console.log('http server listening on port ! ' + httpPort);
   });

@@ -2,7 +2,7 @@
   "name": "ttcc",
   "version": "1.0.0",
   "description": "ttcc",
-  "main": "index.js",
+  "main": "server-side/server/backendMain.js",
   "scripts": {
     "dev": "webpack-dev-server --content-base dev --inline --hot",
     "gulp": "gulp",

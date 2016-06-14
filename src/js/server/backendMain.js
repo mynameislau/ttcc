@@ -12,7 +12,7 @@ startSocketServer().then(() => {
 
   app.use(express.static('dev'));
 
-  const httpPort = 4567;
+  const httpPort = 5000;
   app.listen(httpPort, function () {
     console.log(`http server listening on port ! ${httpPort}`);
   });
