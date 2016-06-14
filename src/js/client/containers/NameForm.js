@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setUsername } from '../actions';
+import { setUsername } from '../../common/actions/actions';
 import { checkForm, checkName } from '../form/form-validation';
-import { isLogged } from '../helpers';
+import { isLogged } from '../../common/helpers';
 
 const mapStateToProps = state => ({
   userList: state.groups.get('userList'),

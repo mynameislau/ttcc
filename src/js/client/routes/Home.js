@@ -6,8 +6,8 @@ import UserList from '../components/UserList';
 import User from '../components/User';
 import NameForm from '../containers/NameForm';
 import NameFormModal from '../containers/NameFormModal';
-import { getMainUsername, isInRestaurant, isLogged, isRestaurantEmpty } from '../helpers';
-import { addUserToRestaurant, removeUserFromRestaurant, deleteRestaurant } from '../actions';
+import { getMainUsername, isInRestaurant, isLogged, isRestaurantEmpty } from '../../common/helpers';
+import { addUserToRestaurant, removeUserFromRestaurant, deleteRestaurant } from '../../common/actions/actions';
 
 const mapStateToProps = state => ({
   mainUsername: getMainUsername(state.groups),

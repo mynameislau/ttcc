@@ -1,4 +1,4 @@
-import { userExists } from '../helpers';
+import { userExists } from '../../common/helpers';
 
 export const checkForm = (event, checks) => new Promise((resolve, reject) => {
   event.preventDefault();

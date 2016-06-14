@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addRestaurant, addUserToRestaurant } from '../actions';
-import { restaurantExists } from '../helpers';
+import { addRestaurant, addUserToRestaurant } from '../../common/actions/actions';
+import { restaurantExists } from '../../common/helpers';
 // import Button from './Button';
 // import $ from '../vendors/bliss';
 

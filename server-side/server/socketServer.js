@@ -17,17 +17,13 @@ var _serverReducer2 = _interopRequireDefault(_serverReducer);
 
 var _serverActions = require('../common/actions/serverActions');
 
-var _config = require('../common/config');
-
 var _logging = require('../common/logging');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-console.log(_config.SOCKET_IO_PORT);
-
-var startSocketServer = exports.startSocketServer = function startSocketServer() {
+var startSocketServer = exports.startSocketServer = function startSocketServer(server) {
   return new Promise(function (resolve, reject) {
-    var io = new _socket2.default().attach(_config.SOCKET_IO_PORT);
+    var io = new _socket2.default(server);
 
     var emitMiddleware = function emitMiddleware(store) {
       return function (next) {

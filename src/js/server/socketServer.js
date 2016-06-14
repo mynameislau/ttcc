@@ -1,14 +1,11 @@
-import Server from 'socket.io';
+import SocketIO from 'socket.io';
 import { createStore, applyMiddleware, compose } from 'redux';
 import serverReducer from '../common/reducers/serverReducer';
 import { createUser, deleteUser } from '../common/actions/serverActions';
-import { SOCKET_IO_PORT } from '../common/config';
 import { logAction, logStateChange } from '../common/logging';
 
-console.log(SOCKET_IO_PORT);
-
-export const startSocketServer = () => new Promise((resolve, reject) => {
-  const io = new Server().attach(SOCKET_IO_PORT);
+export const startSocketServer = (server) => new Promise((resolve, reject) => {
+  const io = new SocketIO(server);
 
   const emitMiddleware = store => next => action => {
     if (action.emit) {

@@ -8,7 +8,7 @@ import {
   SET_MAIN_USER,
   UPDATE_SERVER_STATE,
   DELETE_RESTAURANT
-} from '../actions';
+} from '../actions/actions';
 
 const defaultState = Immutable.Map({
   restaurants: Immutable.Map(),

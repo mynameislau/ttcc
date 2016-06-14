@@ -7,7 +7,7 @@ module.exports = {
   devtool: debug ? 'inline-sourcemap' : null,
   entry: {
     app: [
-      './src/js/client.js'
+      './src/js/client/client.js'
     ]
   },
   module: {

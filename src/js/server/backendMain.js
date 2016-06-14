@@ -1,19 +1,24 @@
 import { startSocketServer } from './socketServer';
 import express from 'express';
+import path from 'path';
 
-startSocketServer().then(() => {
-  console.log('socket server started');
+console.log('socket server started');
 
-  var app = express();
+var app = express();
 
-  /*app.get('/', function (req, res) {
-    res.send('Hello World!');
-  });*/
+// app.get('/', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../../dev/index.html'));
+// });
 
-  app.use(express.static('dev'));
-
-  const httpPort = 5000;
-  app.listen(httpPort, function () {
-    console.log(`http server listening on port ! ${httpPort}`);
-  });
+app.get('/config/', (req, res) => {
+  res.send(JSON.stringify({
+    port: app.get('port')
+  }));
 });
+
+app.set('port', (process.env.PORT || 5000));
+app.use(express.static('dev'));
+
+app.listen(app.get('port'), () => console.log(`listening on port ${app.get('port')}`));
+
+startSocketServer(app);

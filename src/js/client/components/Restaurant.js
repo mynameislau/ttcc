@@ -1,6 +1,6 @@
 import React from 'react';
 import User from './User';
-import { reduceUserListToUser } from '../helpers.js';
+import { reduceUserListToUser } from '../../common/helpers.js';
 
 export default ({ restaurant, addUser, removeUser, userList, userID, deleteRestaurant }) =>
   <div className="restaurant">

@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { toggleUsernameModal } from '../actions/UIActions';
+import { toggleUsernameModal } from '../../common/actions/UIActions';
 import Modal from '../components/Modal';
 import NameForm from './NameForm';
-import { isLogged } from '../helpers';
+import { isLogged } from '../../common/helpers';
 
 const mapStateToProps = state => ({
   hidden: state.UI.get('namePromptState') === 'hidden' ||
