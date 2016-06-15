@@ -23,7 +23,7 @@ const component = ({ hidden, close }) =>
     <div>
       <NameForm prompt="Entrez votre nom" />
       <div>
-        <button onClick={close} class="btn btn--link-like">Non je m'en fous je veux juste regarder</button>
+        <button onClick={close} class="btn btn--link-like">Non je veux juste regarder</button>
       </div>
     </div>
   </Modal>;
