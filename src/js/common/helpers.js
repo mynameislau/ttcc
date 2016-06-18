@@ -24,6 +24,18 @@ export const isInRestaurant = (restaurant, targetID) => {
   .size;
 };
 
+export const getUser = (userID, userList) =>
+  userList.find(user =>
+    user.get('userID') === userID
+  );
+
+export const getUserRestaurant = (userID, restaurants) =>
+  restaurants.find(restaurant =>
+    restaurant.get('users').find(currUserID =>
+      currUserID === userID
+    )
+  );
+
 export const isLogged = (userID, userList) => {
   return userList
   .filter(user => user.get('userID') === userID && user.get('registered') === true)
@@ -44,3 +56,12 @@ export const getNewUniqueID = (userList) => {
 
   return userWithHighestID ? Number(userWithHighestID.get('userID')) + 1 : 0;
 };
+
+export const getRestaurantUsersDiff = (oldRestaurant, newRestaurant) => ({
+  removedUsers: oldRestaurant.get('users').filter(oldUserID =>
+    !newRestaurant.get('users').find(newUserID => newUserID === oldUserID)
+  ),
+  addedUsers: newRestaurant.get('users').filter(newUserID =>
+      !oldRestaurant.get('users').find(oldUserID => oldUserID === newUserID)
+    )
+});

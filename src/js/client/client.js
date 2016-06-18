@@ -9,13 +9,15 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import { Router, Route, browserHistory } from 'react-router';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
+import notificationsMiddleware from './middleware/notificationsMiddleware';
 // import { SOCKET_IO_PORT } from './config';
 import io from 'socket.io-client';
 
 import groupsReducer from '../common/reducers/groupsReducer';
 import UIReducer from '../common/reducers/UIReducer';
 
-const socket = io();
+const local = `${location.protocol}//${location.hostname}:5000`;
+const socket = location.hostname === 'localhost' ? io(local) : io();
 // `${location.protocol}//${location.hostname}:${SOCKET_IO_PORT}`);
 
 const remoteMiddleware = store => next => action => {
@@ -36,10 +38,14 @@ const store = createStore(
   {},
   compose(
     // applyMiddleware(thunk),
+    applyMiddleware(notificationsMiddleware),
     applyMiddleware(remoteMiddleware),
     window.devToolsExtension ? window.devToolsExtension() : f => f
   )
 );
+
+import { checkNotifications } from './notifications';
+store.subscribe(() => checkNotifications(store.getState()));
 
 socket.on('serverStateChanged', state =>
   store.dispatch(updateServerState(state))
