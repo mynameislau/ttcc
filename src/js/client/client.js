@@ -9,7 +9,6 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import { Router, Route, browserHistory } from 'react-router';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
-import notificationsMiddleware from './middleware/notificationsMiddleware';
 // import { SOCKET_IO_PORT } from './config';
 import io from 'socket.io-client';
 
@@ -38,7 +37,6 @@ const store = createStore(
   {},
   compose(
     // applyMiddleware(thunk),
-    applyMiddleware(notificationsMiddleware),
     applyMiddleware(remoteMiddleware),
     window.devToolsExtension ? window.devToolsExtension() : f => f
   )
