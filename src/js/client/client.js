@@ -15,7 +15,8 @@ import io from 'socket.io-client';
 import groupsReducer from '../common/reducers/groupsReducer';
 import UIReducer from '../common/reducers/UIReducer';
 
-const socket = io();
+const local = `${location.protocol}//${location.hostname}:5000`;
+const socket = location.hostname === 'localhost' ? io(local) : io();
 // `${location.protocol}//${location.hostname}:${SOCKET_IO_PORT}`);
 
 const remoteMiddleware = store => next => action => {
@@ -40,6 +41,9 @@ const store = createStore(
     window.devToolsExtension ? window.devToolsExtension() : f => f
   )
 );
+
+import { checkNotifications } from './notifications';
+store.subscribe(() => checkNotifications(store.getState()));
 
 socket.on('serverStateChanged', state =>
   store.dispatch(updateServerState(state))
