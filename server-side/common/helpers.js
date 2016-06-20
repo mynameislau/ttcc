@@ -32,6 +32,20 @@ var isInRestaurant = exports.isInRestaurant = function isInRestaurant(restaurant
   }).size;
 };
 
+var getUser = exports.getUser = function getUser(userID, userList) {
+  return userList.find(function (user) {
+    return user.get('userID') === userID;
+  });
+};
+
+var getUserRestaurant = exports.getUserRestaurant = function getUserRestaurant(userID, restaurants) {
+  return restaurants.find(function (restaurant) {
+    return restaurant.get('users').find(function (currUserID) {
+      return currUserID === userID;
+    });
+  });
+};
+
 var isLogged = exports.isLogged = function isLogged(userID, userList) {
   return userList.filter(function (user) {
     return user.get('userID') === userID && user.get('registered') === true;
@@ -54,4 +68,19 @@ var getNewUniqueID = exports.getNewUniqueID = function getNewUniqueID(userList) 
   });
 
   return userWithHighestID ? Number(userWithHighestID.get('userID')) + 1 : 0;
+};
+
+var getRestaurantUsersDiff = exports.getRestaurantUsersDiff = function getRestaurantUsersDiff(oldRestaurant, newRestaurant) {
+  return {
+    removedUsers: oldRestaurant.get('users').filter(function (oldUserID) {
+      return !newRestaurant.get('users').find(function (newUserID) {
+        return newUserID === oldUserID;
+      });
+    }),
+    addedUsers: newRestaurant.get('users').filter(function (newUserID) {
+      return !oldRestaurant.get('users').find(function (oldUserID) {
+        return oldUserID === newUserID;
+      });
+    })
+  };
 };

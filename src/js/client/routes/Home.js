@@ -33,7 +33,7 @@ const component = ({ mainUsername, restaurantList, userList, addUser, removeUser
       <NameForm />
     </div>
     <section>
-      <h1>Restaurants</h1>
+      <h1>Propositions</h1>
       <ul className="restaurant-list card__list">
         { isLogged(mainUserID, userList) ? <li className="card card--ghost" key="add-restaurant"><AddRestaurant /></li> : null }
         {restaurantList.map(restaurant =>

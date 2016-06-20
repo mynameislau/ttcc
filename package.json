@@ -8,7 +8,7 @@
     "gulp": "gulp",
     "pack": "webpack --config webpack.config.js",
     "start": "node server-side/server/backendMain.js",
-    "build-server": "babel \"src/js\" -d \"server-side\" --ignore src/js/client --presets es2015",
+    "build": "babel \"src/js\" -d \"server-side\" --ignore src/js/client --presets es2015 && webpack --config webpack.config.js",
     "server": "babel-watch --presets es2015 src/js/server/backendMain.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

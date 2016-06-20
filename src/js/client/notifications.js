@@ -1,6 +1,7 @@
 import {
   isLogged,
   getUserRestaurant,
+  getUser,
   getRestaurantUsersDiff
 } from '../common/helpers';
 
@@ -50,10 +51,10 @@ export const checkNotifications = newState => {
       const diff = getRestaurantUsersDiff(mainUserOldRestaurant, mainUserNewRestaurant);
 
       const message = diff.removedUsers.map(userID =>
-        `userID ${userID} disappeared !`
+        `${getUser(userID, oldState.groups.get('userList')).get('username')} a quitté le groupe !`
       )
       .concat(diff.addedUsers.map(userID =>
-        `userID ${userID} is new !`
+        `${getUser(userID, oldState.groups.get('userList')).get('username')} a rejoint le groupe !`
       ))
       .join('\n');
 
